@@ -129,7 +129,7 @@
       ],
       "stops": [
         { "name": "Leicester Forest East Services", "type": "dog_walk", "detail": "~100 miles from Pulloxhill. Grass area for dogs. Coffee stop. Aim ~10:45.", "maps_query": "Leicester Forest East Services M1 LE3 3GB" },
-        { "name": "Tebay Services (M6 J38)", "type": "lunch_fuel", "detail": "Best motorway services in UK. Farm shop, outdoor seating, dog walk field. Top up fuel. Aim ~13:00.", "maps_query": "Tebay Services Westmorland M6 northbound" },
+        { "name": "Tebay Services (M6 J38)", "type": "lunch_fuel", "detail": "Best motorway services in UK. Farm shop, outdoor seating, dog walk field. Aim ~13:00. Fuel here is expensive — Penrith Tesco (J40, 5 min off motorway) is significantly cheaper if the tank is low.", "maps_query": "Tebay Services Westmorland M6 northbound" },
         { "name": "Gretna Green Famous Blacksmiths Shop", "type": "sightseeing", "detail": "Walk the dog-friendly grounds. Indoor museum not dog-friendly.", "cost": "Free", "url": "https://www.gretnagreen.com", "maps_query": "Gretna Green Famous Blacksmiths Shop DG16" }
       ],
       "eating": [
@@ -137,8 +137,8 @@
         { "name": "Smiths at Gretna Green", "type": "dinner", "dog_friendly": true, "detail": "Dog-friendly restaurant on site — book a table.", "url": "https://www.smithsgretnagreen.com", "maps_query": "Smiths at Gretna Green Restaurant DG16 5EA" }
       ],
       "notes": [
-        "Fill tank before leaving Pulloxhill",
-        "Top up at Tebay — do not push past it on less than half a tank",
+        "Fill tank before leaving — Tesco Flitwick (5 min, MK45 area) or Asda Dunstable (near M1 J11) are cheap starting options",
+        "Tebay (J38) is great for lunch but fuel is expensive — if below half, detour to Penrith Tesco J40 (5 min) or Asda Carlisle J44 (20 miles before Gretna, much cheaper)",
         "Leave by 09:00 — M6 busy Saturday afternoons",
         "Plug in BMW on arrival — confirm 3-pin socket with Airbnb host before trip"
       ]
@@ -166,7 +166,7 @@
         { "name": "Clansman Bar, Rowardennan Hotel", "type": "dinner", "dog_friendly": true, "url": "https://www.rowardennanhotel.co.uk" }
       ],
       "notes": [
-        "Fuel up in Drymen — no fuel at Rowardennan",
+        "Fuel: Asda Hamilton near Chatelherault (already stopping there) is cheapest on this route — fill up there. Avoid Drymen Co-op petrol — tiny rural forecourt, premium price. No fuel at Rowardennan.",
         "Last 7 miles from Drymen is single-track",
         "Plug in BMW at Airbnb overnight"
       ]
@@ -260,7 +260,7 @@
       ],
       "notes": [
         "A82 north from Tarbet is one of Scotland's great drives — enjoy it",
-        "Fuel at Tyndrum or Glencoe village",
+        "Fuel: Tyndrum and Glencoe garages are expensive rural prices — fill at Stirling Asda or Callander Tesco before heading north on A82 if possible. If caught short, Tyndrum Green Welly has a forecourt.",
         "Plug in BMW at Ballachulish tonight"
       ]
     },
@@ -293,6 +293,7 @@
       ],
       "notes": [
         "Leave Ballachulish by 08:00 for Nevis Range at 08:30",
+        "Fuel: Tesco Fort William is the last cheap supermarket petrol before Skye — fill up here today while in town for the train. Kyle of Lochalsh garage (tomorrow) is expensive.",
         "Check gondola mountain report the night before: nevisrange.co.uk/mountain-report",
         "Jacobite: register at westcoastrailways.co.uk for email alerts — book immediately if it opens",
         "ScotRail: no booking needed — buy at Fort William station on the day"
@@ -326,7 +327,7 @@
         { "name": "Broadford Co-op (supplies)", "type": "supplies", "detail": "Stock up for 3 nights in Glendale.", "maps_query": "Co-op Broadford Isle of Skye IV49" }
       ],
       "notes": [
-        "FILL UP at Kyle — Glendale has NO fuel for 20+ miles",
+        "FILL UP at Kyle — Glendale has NO fuel for 20+ miles. Kyle garage is expensive but unavoidable. Ideally filled cheaply at Tesco Fort William yesterday (Day 6).",
         "Glendale road (B884) is relentlessly single-track — slow down",
         "Sheep everywhere from here — Koda and Monty on leads near livestock",
         "Plug in BMW at Glendale Airbnb — confirm socket with host"
@@ -423,7 +424,7 @@
         "Foyers Loch Ness IV2 6XU"
       ],
       "stops": [
-        { "name": "Broadford/Kyle — FUEL", "type": "fuel", "detail": "Fill up before leaving Skye.", "maps_query": "petrol station Broadford Isle of Skye IV49" },
+        { "name": "Broadford Co-op — FUEL", "type": "fuel", "detail": "Co-op Broadford is cheaper than Kyle garage — fill up here. Already stopping for supplies. Kyle garage is a fallback if missed.", "maps_query": "Co-op Broadford Isle of Skye IV49" },
         { "name": "Plodda Falls, Glen Affric", "type": "walk_dogs", "detail": "Tomich turn-off on A831. 30-min walk to a 150ft waterfall. Spectacular and quiet.", "cost": "Free parking", "walk_miles": 1.0, "maps_query": "Plodda Falls Tomich Cannich IV4 7LX" },
         { "name": "Invermoriston Telford Bridge", "type": "photo_stop", "detail": "Quick roadside stop — old stone bridge over the falls of Moriston.", "maps_query": "Invermoriston Telford Bridge IV63 7YA" }
       ],
@@ -433,6 +434,7 @@
       ],
       "notes": [
         "Falls of Foyers is 5 min from Brackla cottage — save for tomorrow morning",
+        "Fuel: If not filled at Broadford, Fort Augustus has a small garage on the A82 (on route). Inverness supermarkets are 30 min off-route but much cheaper if needed.",
         "Brackla is the quiet south shore — away from the tourist crowds",
         "Plug in BMW overnight at Brackla"
       ]
@@ -493,6 +495,7 @@
       ],
       "notes": [
         "Leave Brackla by 09:30 — need time for Cairngorms + Bruar + Edinburgh",
+        "Fuel: Tesco Aviemore (right off the B970 near Cairngorms stop) or Tesco/Asda Perth on the A9 — both significantly cheaper than rural Highland stations. Fill at one of these.",
         "Edinburgh rush hour brutal 16:00-18:30 — use A720 bypass to reach Portobello",
         "Lothian Bus 26: Portobello to Princes Street, 25 min, dogs free",
         "Plug in BMW at Portobello Airbnb"
@@ -610,7 +613,7 @@
       "notes": [
         "CHECK HOLY ISLAND TIDES before leaving Edinburgh: holyislandcrossingtimes.northumberland.gov.uk",
         "If time is tight: Bamburgh beach is more special than Alnwick — prioritise it",
-        "Fill up in Edinburgh before leaving"
+        "Fuel: Asda Hermiston Gait (off city bypass A71 end) or Tesco Corstorphine — both cheap and on the natural route south from Portobello. Fill before hitting the A1 — Northumberland rural stations are expensive."
       ]
     },
     {
