@@ -261,7 +261,7 @@ def test_url_structure():
     # Check specific critical URLs are present
     critical = {
         "westcoastrailways.co.uk": "Jacobite",
-        "standrews.com": "Old Course ballot",
+        "crailgolfingsociety.co.uk": "Crail golf alternative",
         "skyeboat-trips.co.uk": "Stardust",
         "malts.com": "Talisker",
         "cruiselochness.com": "Loch Ness cruise",
@@ -299,11 +299,10 @@ def test_bookings():
         has_url_or_action = bool(b.get("url") or b.get("action"))
         test(f"Priority-1 booking '{b['item']}' has URL or action", has_url_or_action)
 
-    # Ballot reminder exists on Day 10
+    # Weather URLs present on all days
     days = data.get("days", [])
-    day10 = next((d for d in days if d["day"] == 10), None)
-    test("Day 10 has ballot_reminder field",
-         day10 is not None and "ballot_reminder" in day10)
+    missing_weather = [d["day"] for d in days if not d.get("weather_url")]
+    test("All 16 days have weather_url", len(missing_weather) == 0)
 
     # Jacobite status is not_bookable
     jacobite = next((b for b in bookings if "Jacobite" in b.get("item", "")), None)
@@ -357,7 +356,7 @@ def test_html_output():
         ("Nevis Range", "Nevis Range Gondola mentioned"),
         ("Talisker", "Talisker Distillery mentioned"),
         ("Glenfinnan", "Glenfinnan Viaduct mentioned"),
-        ("Ballot", "Old Course ballot mentioned"),
+        ("Crail", "Crail golf alternative mentioned"),
         ("Lindisfarne", "Holy Island mentioned"),
         ("Bettys", "Bettys York mentioned"),
         ("Portobello", "Portobello Edinburgh mentioned"),

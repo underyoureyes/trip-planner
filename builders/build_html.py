@@ -264,6 +264,26 @@ CSS = """
   .map-btn-text { line-height: 1.2; }
   .map-btn-text small { display: block; font-size: 12px; font-weight: 400; opacity: 0.85; margin-top: 1px; }
 
+  /* ── Weather button ───────────────────────────────────────── */
+  .weather-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--sky-light);
+    color: var(--sky);
+    border: 1px solid rgba(37,99,168,0.2);
+    border-radius: var(--radius);
+    padding: 11px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    transition: background 0.15s;
+    -webkit-touch-callout: none;
+  }
+  .weather-btn:active { background: #bfdbfe; }
+
   /* ── Stops list ───────────────────────────────────────────── */
   .stops-card {
     background: var(--white);
@@ -955,6 +975,7 @@ def build_day_section(day, stays_map):
 
     waypoints = day.get('map_waypoints', [])
     map_url = maps_dir(waypoints) if waypoints else '#'
+    weather_url = day.get('weather_url', '')
 
     # Subtitle from first and last waypoint
     if len(waypoints) >= 2:
@@ -985,6 +1006,7 @@ def build_day_section(day, stays_map):
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>{h(subtitle)}</small></div>
   </a>
+  {'<a class="weather-btn" href="' + h(weather_url) + '" target="_blank">🌤 Check BBC Weather for today</a>' if weather_url else ''}
 {stops_card}
 {notes_card}
 {ballot_card}
