@@ -440,12 +440,13 @@ def test_consistency():
         return
 
     # Every day title in JSON should appear somewhere in HTML
+    import html as _html
     for d in data["days"]:
-        # Just check the first 3 words of the title
         words = d["title"].split()[:3]
         snippet = " ".join(words)
+        escaped = _html.escape(snippet)
         test(f"Day {d['day']:2d} title fragment '{snippet}' in HTML",
-             snippet in html)
+             snippet in html or escaped in html)
 
     # Every stay name in JSON should appear in HTML
     for stay in data["stays"]:
