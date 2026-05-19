@@ -18,6 +18,9 @@ Each trip is self-contained under `trips/<trip-id>/`. Builders and tests accept 
 ```
 trip-planner/
 ├── CLAUDE.md                  ← you are here
+├── docs/
+│   ├── scotland-2026.md       ← Scotland trip reference
+│   └── lake-garda-2026.md     ← Lake Garda trip reference
 ├── trips/
 │   ├── scotland-2026/
 │   │   ├── data.json          ← ALL Scotland trip data — edit to change anything
@@ -38,112 +41,96 @@ trip-planner/
 
 ---
 
-## Setup
+## Trips
 
-### Prerequisites
+| Trip | Dates | Live guide | Docs |
+|---|---|---|---|
+| Scotland 2026 | 23 May – 7 Jun 2026 | [Open](https://underyoureyes.github.io/trip-planner/scotland-2026/) | [docs/scotland-2026.md](docs/scotland-2026.md) |
+| Lake Garda 2026 | 31 Aug – 7 Sep 2026 | [Open](https://underyoureyes.github.io/trip-planner/lake-garda-2026/) | [docs/lake-garda-2026.md](docs/lake-garda-2026.md) |
+
+---
+
+## Setup
 
 ```bash
 # Python 3.9+
 pip install pytest docx2txt
 ```
 
-### Generate outputs for a trip
+---
+
+## Build, test and deploy
 
 ```bash
-# HTML route guide (defaults to scotland-2026 if --trip omitted)
+# Build HTML for a trip
 python builders/build_html.py --trip scotland-2026
 
 # Run tests
-python tests/test_all.py --trip scotland-2026
-# or
-pytest tests/ -v
-```
+python tests/test_all.py --trip scotland-2026 --no-live-links
 
-### Deploy HTML to GitHub Pages
-
-```bash
+# Deploy to GitHub Pages
 ./deploy.sh scotland-2026
-# deploys to https://underyoureyes.github.io/trip-planner/scotland-2026/
+./deploy.sh lake-garda-2026
 ```
 
 ---
 
-## Data model — itinerary.json
+## Data model — data.json
 
 ### trip
-Top-level metadata: travellers, dogs (name, age, max_walk_miles), car specs, home postcode.
+Top-level metadata: `title`, `subtitle`, `travellers`, `dogs[]` (name, age, max_walk_miles — empty array for dog-free trips), `car` (model, tank_range_miles), `home_postcode`.
 
 ### stays[]
-One entry per accommodation. Fields: `id`, `name`, `location`, `nights`, `checkin`,
-`checkout`, `type` (airbnb/hotel/booking_com), `url`, `cost_gbp`, `confirm_socket_with_host`.
+One entry per accommodation. Fields: `id`, `name`, `location`, `nights`, `checkin`, `checkout`, `type` (airbnb/hotel/booking_com), `url`, `cost_gbp`.
 
 ### days[]
-One entry per day (16 total). Required fields:
-- `day` (1–16), `date`, `title`, `stay_id` (matches a stays.id)
+One entry per day. Required fields:
+- `day`, `date`, `title`, `stay_id` (matches a stays.id — null for travel days)
 - `leg_miles`, `leg_drive_hours`
-- `total_walk_miles` — must not exceed 5.0 (Koda's limit)
-- `flags[]` — optional: "highlight", "golf", "ebike", "fuel_warning", "train", "ballot_action"
+- `total_walk_miles` — must not exceed most-constrained dog's limit (5.0 miles for Scotland)
+- `flags[]` — optional: `highlight`, `golf`, `ebike`, `fuel_warning`, `train`, `ballot_action`
 - `map_waypoints[]` — array of place strings for Google Maps (max 10)
-- `stops[]` — each stop has: `name`, `type`, `detail`, optional `cost`/`url`/`maps_query`/`walk_miles`/`book_ahead`
-- `eating[]` — each eating option has: `name`, `type`, `dog_friendly`, optional `url`
+- `stops[]` — each stop: `name`, `type`, `detail`, optional `cost`/`url`/`maps_query`/`walk_miles`/`book_ahead`
+- `eating[]` — each entry: `name`, `type`, `price_tier`, `detail`, optional `url`/`maps_query`
 - `notes[]` — plain string tips and warnings
 
-### stop types (used in stops[].type)
+### stop types
+
 ```
-dog_walk          walk with dogs
-walk_dogs         walk with dogs (alias)
-fuel              fill up car — generates amber warning box
-lunch_fuel        combined lunch and fuel stop
-cruise_dogs       boat trip with dogs
-boat_dogs         boat trip with dogs (alias)
-castle_dogs       castle visit, dogs in grounds
-castle_dogs_optional  optional detour castle
-sightseeing       general sightseeing
-sightseeing_dogs  sightseeing with dogs
-photo_stop        quick photo stop
-supplies          shopping stop
-ebike_optional    optional e-bike hire
-golf              golf round
-distillery        whisky distillery visit
-pub_dogs          dog-friendly pub
-gondola_dogs      gondola/cable car with dogs
-train_dogs        train journey with dogs
-viewpoint         roadside viewpoint, minimal walking
-attraction_dogs   indoor attraction that allows dogs
-attraction_no_dogs   indoor attraction, dogs stay at accommodation
-tidal_warning     tide-dependent crossing — generates red warning box
-afternoon_tea_no_dogs  afternoon tea, dogs stay at accommodation
+sightseeing           general sightseeing (no dogs required)
+sightseeing_dogs      sightseeing with dogs
+dog_walk / walk_dogs  walk with dogs
+photo_stop            quick roadside photo stop
+viewpoint             roadside viewpoint, minimal walking
+supplies              shopping stop
+fuel                  fill up car — generates amber warning box
+lunch_fuel            combined lunch and fuel stop
+ebike_optional        optional e-bike/road bike hire
+golf                  golf round
+distillery            whisky distillery visit
+pub_dogs              dog-friendly pub
+castle_dogs           castle visit, dogs in grounds
+castle_dogs_optional  optional detour castle with dogs
+cruise_dogs           boat trip with dogs
+boat_dogs             boat trip with dogs (alias)
+gondola_dogs          gondola/cable car with dogs
+train_dogs            train journey with dogs
+attraction_dogs       indoor attraction that allows dogs
+attraction_no_dogs    indoor attraction, dogs stay at accommodation
+tidal_warning         tide-dependent crossing — generates red warning box
+afternoon_tea_no_dogs afternoon tea, dogs stay at accommodation
 ```
 
 ### Special day fields
 - `golf{}` — course, holes, cost_gbp, hire_included, booking, url, dogs_welcome
 - `afternoon_tea{}` — name, detail, cost, url
-- `ballot_reminder{}` — action, deadline, url, detail (generates highlighted reminder on Day 10)
+- `ballot_reminder{}` — action, deadline, url, detail
 - `ebike{}` — for days with e-bike panels
+- `weather_url` — per-day weather link (AccuWeather for international; BBC for UK)
 
 ---
 
-## Key constraints (enforced by tests)
-
-| Constraint | Value | Reason |
-|---|---|---|
-| Max daily walk | 5.0 miles | Koda is 11 — senior dog |
-| Car tank range | 300 miles | BMW 530e |
-| EV overnight top-up | ~28 miles | 3-pin socket charging |
-| Map waypoints per day | ≤ 10 | Google Maps URL limit |
-| Jacobite bookings | 2 separate | 1 dog per booking rule |
-| Loch Ness cruise | Standard only | RIB does not allow dogs |
-
----
-
-## How to add a new day / change content
-
-1. Edit `trips/<trip-id>/data.json`
-2. Run `python tests/test_all.py --trip <trip-id>` — all tests should pass
-3. Run `python builders/build_html.py --trip <trip-id>`
-4. Deploy: `./deploy.sh <trip-id>`
-
-## How to add a new stop to a day
+## How to add a new stop
 
 Find the day in `days[]`, add to `stops[]`:
 
@@ -158,53 +145,34 @@ Find the day in `days[]`, add to `stops[]`:
 }
 ```
 
-Then update `total_walk_miles` for the day if the stop adds walking.
+Update `total_walk_miles` if the stop adds walking.
 
 ---
 
 ## Test suite overview
 
-`tests/test_all.py` covers 10 test groups (generic + scotland-2026-specific):
+`tests/test_all.py` covers 12 test groups:
 
-1. **JSON integrity** — days sequential, stays valid, contiguous dates, required fields
-2. **Walking limits** — every day ≤ most-constrained dog's limit
-3. **Fuel/range safety** — no leg exceeds car range, fuel stops on sparse legs
+1. **JSON integrity** — days sequential, stays valid, required fields
+2. **Walking limits** — every day ≤ most-constrained dog's limit (skipped if no dogs)
+3. **Fuel/range safety** — no leg exceeds car range
 4. **Map waypoints** — 2–10 waypoints per day, no empty strings
-5. **URL structure** — all URLs valid http/https; critical domains (scotland-2026 only)
+5. **URL structure** — all URLs valid http/https
 6. **Bookings completeness** — all required bookings defined with priority
-7. **HTML output** — all day sections, nav tabs, map links, info panels, content
-8. **Word doc output** — exists, correct size, all days present, key content
-9. **JSON ↔ HTML consistency** — day titles and stay names match between sources
-10. **Critical safety** — Holy Island, Jacobite, Loch Ness RIB (scotland-2026 only)
-
-Run with: `python tests/test_all.py --trip scotland-2026`
+7. **HTML output** — all day sections, nav tabs, map links, info panels
+8. **Word doc output** — exists, correct size, all days present (Scotland only)
+9. **JSON ↔ HTML consistency** — day titles and stay names match
+10. **Critical safety** — Holy Island, Jacobite, Loch Ness RIB (Scotland only)
+11. **Live link checker** — all URLs reachable (skipped with `--no-live-links`)
+12. **Google Maps validator** — waypoints specific enough, Maps URLs resolve
 
 ---
 
-## Trip summaries
+## Builder behaviour with no dogs
 
-### Scotland 2026
-
-- **Dates:** 23 May – 7 June 2026
-- **Travellers:** David & Lesley + Koda (age 11) + Monty (age 2)
-- **Car:** BMW 530e Estate (PHEV, 3-pin charging cable)
-- **Route:** Pulloxhill → Gretna → Loch Lomond → Glencoe → Skye → Loch Ness → Edinburgh → York → Home
-- **Total accommodation:** 15 nights across 7 stays
-- **Total cost:** ~£3,281 accommodation + activities
-- **GitHub Pages:** https://underyoureyes.github.io/trip-planner/scotland-2026/
-
-### Lake Garda 2026
-
-- **Dates:** 31 Aug – 7 Sep 2026 (8 days, 7 nights)
-- **Travellers:** David & Lesley (no dogs)
-- **Transport:** Riviera Travel coach tour — all daytime excursions with guide
-- **Flights:** BA LHR 11:50 → VCE 15:05 (outbound); BA VCE 14:20 → LHR 15:45 (return)
-- **Hotel:** Hotel Europa SkyPool & Panorama 4★, Piazza Catena 13, Riva del Garda — B&B basis
-- **Hotel URL:** https://www.hoteleuropariva.it/en/
-- **Free days:** Day 1 (afternoon only after ~16:30 arrival), Day 4 (full free day)
-- **Day 4 plan:** Morning road bike ride Riva → Torbole (~30km, 2-3 hrs via CCT Bike Rental Arco); afternoon Bastione/Cascata del Varone/Arco/Golf Bogliaco
-- **Nearest golf:** Golf Bogliaco, Gargnano (18-hole PAR 70, ~13 miles west shore, taxi ~€35 each way)
-- **Excursions:** Sirmione (Day 2), Malcesine/Monte Baldo (Day 3), Limone (Day 5), Bardolino wine (Day 6), Verona (Day 7)
-- **Evening dining:** 3 options per night (€/€€/€€€). Best restaurant: Al Volt (Via Fiume 73). Last night: Ristorante Arche Verona
-- **No word doc** — HTML only for this trip
-- **GitHub Pages:** https://underyoureyes.github.io/trip-planner/lake-garda-2026/
+When `trip.dogs` is an empty array:
+- Dog chip hidden from hero
+- Travellers line shows without dog names
+- Walking stats icon: 🚶 (not 🐾)
+- Activities section title: "📍 Activities" (not "🐾 With [names]")
+- Walking limit test skipped
