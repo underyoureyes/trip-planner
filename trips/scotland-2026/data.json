@@ -245,7 +245,7 @@
         "Gretna DG16",
         "Chatelherault Country Park Hamilton ML3 7UE",
         "Loch Lomond Shores Balloch G83 8QL",
-        "Co-op Drymen Stirlingshire",
+        "Drymen The Square G63 0BL",
         "Rowardennan Loch Lomond G63 0AR"
       ],
       "stops": [
@@ -267,7 +267,7 @@
           "name": "Drymen Co-op",
           "type": "supplies",
           "detail": "Last shop before Rowardennan. Stock up for 3 nights. Mon-Sat 07:00-22:00, Sun 08:00-20:00.",
-          "maps_query": "Co-op Drymen Stirlingshire"
+          "maps_query": "Drymen The Square G63 0BL"
         }
       ],
       "eating": [
@@ -335,6 +335,12 @@
           "detail": "At Trossachs Pier. E-bikes ~35/day. Call 01877 376316 re dog trailer use.",
           "url": "https://www.katrinewheelz.co.uk",
           "maps_query": "Katrine Wheelz Trossachs Pier"
+        },
+        {
+          "name": "Lomond Adventure, Balloch — road & e-bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "Road bikes and e-bikes 14 miles south of Rowardennan. The near-traffic-free B837 lochside lane between Drymen and Rowardennan is ideal. Best as a standalone morning before the day's activities.",
+          "maps_query": "bike hire Loch Lomond Balloch G83"
         }
       ],
       "eating": [
@@ -387,6 +393,12 @@
           "cost": "~10pp",
           "url": "https://www.historicenvironment.scot/visit-a-place/places/doune-castle/",
           "maps_query": "Doune Castle Doune FK16 6EA"
+        },
+        {
+          "name": "Aberfoyle — e-bike & road bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "Aberfoyle is 10 miles west of Doune on the A873. E-bike hire at the Forest Visitor Centre for Queen Elizabeth Forest Park trails. Road cyclists: the Duke's Pass (A821) is a classic Scottish climb — 5km at 6% with spectacular Trossachs views.",
+          "maps_query": "bike hire Aberfoyle Queen Elizabeth Forest Park FK8"
         }
       ],
       "eating": [
@@ -463,6 +475,13 @@
           "type": "sightseeing_dogs",
           "detail": "Short walk in the valley. NTS Visitor Centre nearby.",
           "maps_query": "Glencoe Village PH49"
+        },
+        {
+          "name": "Nevis Cycles, Fort William — road & e-bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "8 miles north of Ballachulish on the A82. Road bikes and e-bikes. Glen Nevis road is quieter and scenic — excellent road ride. Good evening option from your Ballachulish base.",
+          "url": "https://www.google.com/maps/search/Nevis+Cycles+Fort+William+PH33/@56.82,-5.11,13z",
+          "maps_query": "Nevis Cycles Fort William PH33"
         }
       ],
       "eating": [
@@ -503,6 +522,7 @@
       "map_waypoints": [
         "Ballachulish PH49 4JY",
         "Nevis Range Torlundy Fort William PH33 6SW",
+        "Glenfinnan Viaduct Viewpoint PH37 4LT",
         "Fort William Railway Station Fort William PH33 6TQ",
         "Mallaig Harbour PH41",
         "Fort William PH33",
@@ -520,6 +540,14 @@
           "weather_dependent": true
         },
         {
+          "name": "Glenfinnan Viaduct Viewpoint",
+          "type": "photo_stop",
+          "detail": "Drive from Nevis Range to Glenfinnan on the A830 (~20 min). Park at the NTS car park \u2014 10 min walk to the elevated viewpoint for the classic arch-and-loch shot. The Glenfinnan Monument (Jacobite Rising 1745) is right there too, dogs welcome in the grounds. Allow 35 min total. Leave by 11:30 to reach Fort William station for 12:18.",
+          "cost": "NTS car park ~\u00a33",
+          "url": "https://www.nts.org.uk/visit/places/glenfinnan-monument",
+          "maps_query": "Glenfinnan Viaduct Viewpoint PH37 4LT"
+        },
+        {
           "name": "Jacobite Steam Train (Option A \u2014 if running)",
           "type": "train_dogs",
           "detail": "NOT currently bookable \u2014 ORR dispute. Sign up for alerts. If open: 2 separate bookings (Koda on one, Monty on other). 10:15 dep, Mallaig 12:25, return 14:10.",
@@ -530,20 +558,28 @@
           "bookings_needed": 2
         },
         {
-          "name": "ScotRail Fort William to Mallaig (Option B)",
+          "name": "ScotRail Fort William to Mallaig (Option B \u2014 likely option)",
           "type": "train_dogs",
-          "detail": "Same route, same Glenfinnan Viaduct \u2014 diesel not steam. ~10:55 dep, Mallaig 12:45, return 14:05. No advance booking needed.",
-          "cost": "~15-20pp return, dogs free",
+          "detail": "Same route, same Glenfinnan Viaduct crossing \u2014 diesel not steam. 12:18 dep Fort William, arrive Mallaig ~14:10. Return 16:05 from Mallaig, back Fort William ~18:00. ~1h55 in Mallaig \u2014 enough for lunch and harbour walk. Trains are infrequent so do not get off at intermediate stops. Look out both sides ~35 min in for the viaduct \u2014 right side sees the arch curve, left side looks down to Loch Shiel.",
+          "cost": "Off-peak return ~\u00a313-15pp, dogs free",
           "url": "https://www.scotrail.co.uk",
           "status": "available",
-          "advance_booking_required": false
+          "advance_booking_required": false,
+          "booking_note": "Book off-peak return online at scotrail.co.uk or buy at Fort William station. Off-peak applies after 09:15 on weekdays \u2014 12:18 qualifies. Dogs travel free, no reservation needed for dogs."
         },
         {
           "name": "Mallaig Harbour",
           "type": "walk_dogs",
-          "detail": "1.5 hr stop. Walk the harbour. Fish & chips at Jaffy's or Cornerstone.",
+          "detail": "Arrive ~14:10. ~1h55 before return train. Walk the harbour, fish & chips at Jaffy's or Cornerstone. Plenty of time.",
           "walk_miles": 1.0,
           "maps_query": "Mallaig Harbour PH41"
+        },
+        {
+          "name": "Nevis Cycles / Off Beat Bikes, Fort William — road & e-bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "In Fort William for the train today. Nevis Cycles (road bikes, e-bikes, Lochy Retail Park) and Off Beat Bikes (mountain & e-bikes, High Street) both in town. Good option for a morning ride before the train or after returning from Mallaig.",
+          "url": "https://www.google.com/maps/search/Nevis+Cycles+Fort+William+PH33/@56.82,-5.11,13z",
+          "maps_query": "Nevis Cycles Fort William PH33"
         }
       ],
       "eating": [
@@ -557,7 +593,7 @@
           "name": "Jaffy's Fish Bar, Mallaig",
           "type": "lunch",
           "dog_friendly": true,
-          "detail": "Arrive Mallaig ~12:30-13:00 on the train. Harbour-side fish & chips \u2014 eat on the waterfront with the dogs while waiting for the return. Cornerstone Caf\u00e9 is a good alternative nearby.",
+          "detail": "Arrive Mallaig ~14:10 on the train. Harbour-side fish & chips \u2014 eat on the waterfront with the dogs, return train 16:05 so no rush. Ask for a deep fried Mars bar (choc chop) \u2014 this is Scotland. Cornerstone Caf\u00e9 is a good alternative nearby.",
           "maps_query": "Jaffy's Fish Bar Mallaig PH41"
         },
         {
@@ -579,7 +615,9 @@
         "Fuel: Tesco Fort William is the last cheap supermarket petrol before Skye \u2014 fill up here today while in town for the train. Kyle of Lochalsh garage (tomorrow) is expensive.",
         "Check gondola mountain report the night before: nevisrange.co.uk/mountain-report",
         "Jacobite: register at westcoastrailways.co.uk for email alerts \u2014 book immediately if it opens",
-        "ScotRail: no booking needed \u2014 buy at Fort William station on the day"
+        "ScotRail timings: 12:18 dep Fort William \u2192 ~14:10 Mallaig \u2192 16:05 return \u2192 ~18:00 Fort William. Book off-peak return online (scotrail.co.uk) or at station \u2014 off-peak after 09:15 weekdays, 12:18 qualifies. Dogs free.",
+        "Glenfinnan Viaduct viewpoint: after gondola, drive A830 west (~20 min). 35 min stop \u2014 walk to viewpoint, see the monument. Leave by 11:30 to reach Fort William station in time.",
+        "Do NOT get off the train at intermediate stops \u2014 service is infrequent, you risk being stranded for 3+ hours"
       ],
       "weather_url": "https://www.bbc.co.uk/weather/2649169"
     },
@@ -711,6 +749,13 @@
           "detail": "20 min wander, mostly flat. Donation parking.",
           "walk_miles": 0.5,
           "maps_query": "Fairy Glen Uig Isle of Skye"
+        },
+        {
+          "name": "Island Cycles, Portree — road & e-bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "In Portree on the Trotternish loop. Road bikes and e-bikes. The Trotternish ridge road (Portree–Staffin–Uig loop, ~40 miles) is Skye's classic road ride. Hire for a few hours while in town for lunch.",
+          "url": "https://www.islandcycles-skye.co.uk",
+          "maps_query": "Island Cycles Portree Isle of Skye IV51"
         }
       ],
       "eating": [
@@ -798,6 +843,13 @@
           "maps_query": "Talisker Distillery Carbost IV47 8SR",
           "book_ahead": true,
           "dogs_inside": false
+        },
+        {
+          "name": "Island Cycles, Portree \u2014 road & e-bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "In Portree for the Stardust boat this morning. Road bikes and e-bikes. Use waiting time before or after the cruise. Portree to Sligachan on the A87 is a quiet scenic road ride (10 miles one way). Tag-team if needed.",
+          "url": "https://www.islandcycles-skye.co.uk",
+          "maps_query": "Island Cycles Portree Isle of Skye IV51"
         }
       ],
       "eating": [
@@ -827,6 +879,13 @@
           "type": "dinner_fine",
           "dog_friendly": false,
           "url": "https://scorrybreac.com"
+        },
+        {
+          "name": "Portree chip shop — deep fried Mars bar (choc chop)",
+          "type": "lunch_alternative",
+          "dog_friendly": true,
+          "detail": "Any harbour-area chippie in Portree will do a deep fried Mars bar — ask for a 'choc chop'. Classic Scottish guilty pleasure. Eat on the harbour wall while the dogs watch the boats.",
+          "maps_query": "fish and chip shop Portree Isle of Skye IV51"
         }
       ],
       "notes": [
@@ -958,6 +1017,13 @@
           "detail": "Right by Urquhart. E-bikes from ~35/2hrs. Tag-team: one rides, other walks dogs.",
           "url": "https://www.lochnesstravel.com/e-bikes-hire/",
           "maps_query": "Loch Ness Hub Drumnadrochit IV63"
+        },
+        {
+          "name": "Bothy Bikes, Drumnadrochit — road & e-bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "5 min from Urquhart Castle. Road bikes and e-bikes. Drumnadrochit to Invermoriston on General Wade's Military Road (south shore) is quieter and hillier than the A82 — superb road ride with loch views.",
+          "url": "https://www.bothybikes.co.uk",
+          "maps_query": "Bothy Bikes Drumnadrochit IV63"
         }
       ],
       "eating": [
@@ -990,7 +1056,7 @@
       "total_walk_miles": 3.5,
       "map_waypoints": [
         "Foyers Loch Ness IV2 6XU",
-        "Loch an Eilein Car Park Rothiemurchus Cairngorms",
+        "Loch an Eilein Car Park PH22 1QH",
         "House of Bruar Blair Atholl PH18 5TW",
         "Edinburgh Zoo Corstorphine EH12",
         "Portobello Edinburgh EH15"
@@ -1002,7 +1068,7 @@
           "detail": "30 min off A9 at Aviemore. Flat 3-mile loop, island castle, off-lead zones. One of the UK's best picnic spots.",
           "cost": "Parking ~5",
           "walk_miles": 3.0,
-          "maps_query": "Loch an Eilein Car Park Rothiemurchus Cairngorms"
+          "maps_query": "Loch an Eilein Car Park PH22 1QH"
         },
         {
           "name": "House of Bruar, Blair Atholl",
@@ -1019,6 +1085,13 @@
           "url": "https://www.edinburghzoo.org.uk",
           "maps_query": "Edinburgh Zoo Corstorphine EH12",
           "book_ahead": true
+        },
+        {
+          "name": "Bothy Bikes, Aviemore \u2014 road & e-bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "Right next to the Loch an Eilein / Rothiemurchus turn-off (B970). Road bikes and e-bikes. Could combine the Loch an Eilein walk with a bike loop of the Rothiemurchus Forest. Road cyclists: Strathspey lanes south of Aviemore are excellent \u2014 quiet and scenic.",
+          "url": "https://www.bothybikes.co.uk",
+          "maps_query": "Bothy Bikes Aviemore PH22"
         }
       ],
       "eating": [
@@ -1072,7 +1145,7 @@
         "West Sands Beach St Andrews KY16",
         "Swilcan Bridge St Andrews",
         "St Andrews Cathedral KY16",
-        "R A World Golf Museum St Andrews",
+        "World Golf Museum St Andrews KY16 9AB",
         "Portobello Edinburgh EH15"
       ],
       "stops": [
@@ -1104,7 +1177,14 @@
           "detail": "Opposite 1st tee. Dog-friendly outdoor cafe terrace.",
           "cost": "~12pp",
           "url": "https://www.worldgolfmuseum.com",
-          "maps_query": "R A World Golf Museum St Andrews"
+          "maps_query": "World Golf Museum St Andrews KY16 9AB"
+        },
+        {
+          "name": "Biketrax, Edinburgh — road & e-bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "4 miles from Portobello in Tollcross. Road bikes and e-bikes. Best used as a morning ride before driving to St Andrews. Portobello promenade → Leith → Cramond is 20+ miles flat. Pentland Hills 10 miles south for climbs.",
+          "url": "https://www.google.com/maps/search/Biketrax+Edinburgh/@55.94,-3.20,14z",
+          "maps_query": "Biketrax Edinburgh EH3"
         }
       ],
       "eating": [
@@ -1112,6 +1192,7 @@
           "name": "Cromars fish & chips",
           "type": "lunch",
           "dog_friendly": true,
+          "detail": "St Andrews institution. Ask for a deep fried Mars bar (choc chop) for dessert — they do them. Eat on the harbour or take to West Sands.",
           "maps_query": "Cromars Fish and Chips St Andrews"
         },
         {
@@ -1204,6 +1285,13 @@
           "detail": "1.5 miles ONE WAY only \u2014 bus back from Dean Village. Do not add the return trip.",
           "walk_miles": 1.5,
           "maps_query": "Stockbridge Edinburgh Water of Leith"
+        },
+        {
+          "name": "Biketrax, Edinburgh \u2014 road & e-bike hire (optional)",
+          "type": "ebike_optional",
+          "detail": "4 miles from Portobello. Road bikes and e-bikes for hire. Good early morning option before the golf. Water of Leith cycleway, Arthur's Seat loop (6 miles), or Pentland Hills (10 miles south) for a proper climb. Book ahead in June.",
+          "url": "https://www.google.com/maps/search/Biketrax+Edinburgh/@55.94,-3.20,14z",
+          "maps_query": "Biketrax Edinburgh EH3"
         }
       ],
       "eating": [
@@ -1230,6 +1318,13 @@
           "type": "dinner_fine",
           "dog_friendly": false,
           "url": "https://www.thewitchery.com"
+        },
+        {
+          "name": "Blue Lagoon Fish Bar — deep fried Mars bar (choc chop)",
+          "type": "lunch_alternative",
+          "dog_friendly": true,
+          "detail": "Edinburgh institution and the go-to spot for a deep fried Mars bar. Ask for a 'choc chop' — battered and deep fried. Nicholson Street branch is central; South Clerk Street branch is closest to Portobello.",
+          "maps_query": "Blue Lagoon Fish Bar Edinburgh"
         }
       ],
       "notes": [

@@ -1,22 +1,9 @@
 {
   "trip": {
     "title": "Lake Garda 2026",
-    "subtitle": "7-Day Italy Escape",
+    "subtitle": "7-Night Italy Escape",
     "travellers": "David & Lesley",
-    "dogs": [
-      {
-        "name": "Koda",
-        "age": 12,
-        "max_walk_miles": 5.0,
-        "notes": "Senior dog — MAX 5 miles per day at relaxed pace"
-      },
-      {
-        "name": "Monty",
-        "age": 3,
-        "max_walk_miles": 10.0,
-        "notes": "Young and energetic"
-      }
-    ],
+    "dogs": [],
     "car": {
       "model": "Hire Car (TBD)",
       "type": "Petrol",
@@ -26,62 +13,85 @@
       "overnight_ev_top_up_miles": 0
     },
     "home_postcode": "MK45 5HD",
-    "github_url": "https://underyoureyes.github.io/trip-planner/lake-garda-2026"
+    "github_url": "https://underyoureyes.github.io/trip-planner/lake-garda-2026",
+    "flights": {
+      "outbound": {
+        "airline": "British Airways",
+        "class": "BA Groups",
+        "passengers": ["Mr David Castledine", "Mrs Lesley Castledine"],
+        "date": "2026-08-31",
+        "from": "London Heathrow Airport (LHR)",
+        "depart": "11:50",
+        "to": "Venice Marco Polo Airport (VCE)",
+        "arrive": "15:05"
+      },
+      "inbound": {
+        "airline": "British Airways",
+        "class": "BA Groups",
+        "passengers": ["Mr David Castledine", "Mrs Lesley Castledine"],
+        "date": "2026-09-07",
+        "from": "Venice Marco Polo Airport (VCE)",
+        "depart": "14:20",
+        "to": "London Heathrow Airport (LHR)",
+        "arrive": "15:45"
+      }
+    }
   },
 
   "stays": [
     {
       "id": "lake-garda",
-      "name": "TBD — Lake Garda Accommodation",
+      "name": "Hotel Europa 4*",
       "location": "Lake Garda, Italy",
-      "nights": 6,
-      "checkin": "2026-08-01",
-      "checkout": "2026-08-07",
-      "type": "booking_com",
+      "nights": 7,
+      "checkin": "2026-08-31",
+      "checkout": "2026-09-07",
+      "type": "hotel",
+      "room": "Superior Double with Lake View",
       "url": "https://www.booking.com",
-      "cost_gbp": 0,
-      "notes": "TBD — pick location on lake (Riva del Garda / Malcesine / Sirmione)"
+      "cost_gbp": 0
     }
   ],
 
   "days": [
     {
       "day": 1,
-      "date": "2026-08-01",
-      "title": "Fly to Verona — Arrive Lake Garda",
+      "date": "2026-08-31",
+      "title": "Fly Heathrow to Venice — Arrive Lake Garda",
       "stay_id": "lake-garda",
-      "leg_miles": 30,
-      "leg_drive_hours": 0.5,
+      "leg_miles": 60,
+      "leg_drive_hours": 1.5,
       "total_walk_miles": 1.0,
       "flags": [],
       "weather_url": "https://www.bbc.co.uk/weather/search?q=Lake+Garda",
       "map_waypoints": [
-        "Verona Villafranca Airport VRN",
+        "Venice Marco Polo Airport VCE",
         "Lake Garda, Italy"
       ],
       "stops": [
         {
-          "name": "Verona Villafranca Airport",
+          "name": "Venice Marco Polo Airport (VCE)",
           "type": "sightseeing",
-          "detail": "Arrive, collect hire car, drive ~30 mins to Lake Garda.",
-          "maps_query": "Verona Airport VRN"
+          "detail": "Depart LHR 11:50, arrive VCE 15:05. Collect hire car — drive ~1.5 hrs to Lake Garda.",
+          "maps_query": "Venice Marco Polo Airport VCE Italy"
         }
       ],
       "eating": [
         {
-          "name": "TBD — local restaurant near accommodation",
+          "name": "TBD — dinner near hotel on arrival",
           "type": "dinner",
-          "dog_friendly": true
+          "dog_friendly": false
         }
       ],
       "notes": [
-        "TBD — confirm flight times and hire car booking.",
-        "Drive from Verona airport to Lake Garda is ~30 mins (south lake) to ~1.5 hrs (Riva del Garda, north)."
+        "Flight: BA LHR 11:50 → VCE 15:05. BA Groups booking.",
+        "Drive from Venice Marco Polo to south Lake Garda (Desenzano/Sirmione) is ~1.5 hrs via A4 motorway.",
+        "Drive to north lake (Riva del Garda) is ~2.5 hrs. Allow time after a full travel day."
       ]
     },
     {
       "day": 2,
-      "date": "2026-08-02",
+      "date": "2026-09-01",
       "title": "Sirmione & South Lake",
       "stay_id": "lake-garda",
       "leg_miles": 40,
@@ -98,23 +108,23 @@
       "stops": [
         {
           "name": "Sirmione Peninsula",
-          "type": "sightseeing_dogs",
-          "detail": "Narrow medieval peninsula jutting into the lake. Walk the old town walls and lakeside promenade. Dogs OK outside the castle.",
+          "type": "sightseeing",
+          "detail": "Narrow medieval peninsula jutting into the lake. Walk the old town walls and lakeside promenade.",
           "cost": "Free to walk; Scaligero Castle ~€10pp",
           "maps_query": "Sirmione BS Italy"
         },
         {
           "name": "Scaligero Castle",
-          "type": "attraction_no_dogs",
-          "detail": "Well-preserved 13th-century moated castle. Leave dogs at a café terrace outside.",
+          "type": "sightseeing",
+          "detail": "Well-preserved 13th-century moated castle with views over the lake.",
           "cost": "~€10pp",
           "url": "https://www.beniculturali.it",
           "maps_query": "Castello Scaligero Sirmione"
         },
         {
           "name": "Lazise",
-          "type": "sightseeing_dogs",
-          "detail": "Charming walled village on the east shore. Dog-friendly lakeside walk.",
+          "type": "sightseeing",
+          "detail": "Charming walled village on the east shore. Lakeside walk and piazza cafés.",
           "maps_query": "Lazise VR Italy"
         }
       ],
@@ -122,23 +132,23 @@
         {
           "name": "TBD — lakeside restaurant Sirmione",
           "type": "lunch",
-          "dog_friendly": true
+          "dog_friendly": false
         },
         {
           "name": "TBD — evening in Lazise or local",
           "type": "dinner",
-          "dog_friendly": true
+          "dog_friendly": false
         }
       ],
       "notes": [
-        "Sirmione is very busy in August — arrive early (before 10am) to beat crowds.",
+        "Sirmione is very busy in August/September — arrive early (before 10am) to beat crowds.",
         "Parking outside the old town gates; the centro storico is mostly pedestrianised."
       ]
     },
     {
       "day": 3,
-      "date": "2026-08-03",
-      "title": "Malcesine & Cable Car",
+      "date": "2026-09-02",
+      "title": "Malcesine & Monte Baldo Cable Car",
       "stay_id": "lake-garda",
       "leg_miles": 50,
       "leg_drive_hours": 1.5,
@@ -153,14 +163,14 @@
       "stops": [
         {
           "name": "Malcesine Old Town",
-          "type": "sightseeing_dogs",
-          "detail": "Prettiest village on the east shore. Castello Scaligero overlooks the lake. Narrow car-free alleys, lakeside cafés.",
+          "type": "sightseeing",
+          "detail": "Prettiest village on the east shore. Castello Scaligero overlooks the lake. Narrow car-free alleys and lakeside cafés.",
           "maps_query": "Malcesine VR Italy"
         },
         {
           "name": "Monte Baldo Cable Car",
-          "type": "gondola_dogs",
-          "detail": "Rotating cable car to 1,760m. Panoramic views over the lake and Alps. Dogs allowed — check ahead for any restrictions.",
+          "type": "sightseeing",
+          "detail": "Rotating cable car to 1,760m. Panoramic views over the lake and Alps. Book in advance for September.",
           "cost": "~€25pp return",
           "url": "https://www.funiviedelbaldo.it",
           "book_ahead": true,
@@ -171,17 +181,17 @@
         {
           "name": "TBD — Malcesine lakeside lunch",
           "type": "lunch",
-          "dog_friendly": true
+          "dog_friendly": false
         }
       ],
       "notes": [
-        "TBD — check cable car dog policy and book tickets in advance for August.",
+        "Book cable car tickets in advance — very busy in summer.",
         "Malcesine is very popular — park at the edge of town and walk in."
       ]
     },
     {
       "day": 4,
-      "date": "2026-08-04",
+      "date": "2026-09-03",
       "title": "Riva del Garda — North Lake",
       "stay_id": "lake-garda",
       "leg_miles": 60,
@@ -198,14 +208,14 @@
       "stops": [
         {
           "name": "Riva del Garda",
-          "type": "sightseeing_dogs",
+          "type": "sightseeing",
           "detail": "Dramatic northern tip of the lake, hemmed in by cliffs. Piazza III Novembre, lakeside promenade, the Rocca fortress.",
           "maps_query": "Riva del Garda TN Italy"
         },
         {
           "name": "Arco Castle",
-          "type": "castle_dogs",
-          "detail": "Ruined medieval castle perched above the town. Short steep walk up — stunning views. Dogs welcome in grounds.",
+          "type": "sightseeing",
+          "detail": "Ruined medieval castle perched above the town. Short steep walk up — stunning views.",
           "cost": "~€3pp",
           "maps_query": "Castello di Arco TN Italy"
         }
@@ -214,7 +224,7 @@
         {
           "name": "TBD — Riva del Garda piazza restaurant",
           "type": "lunch",
-          "dog_friendly": true
+          "dog_friendly": false
         }
       ],
       "notes": [
@@ -224,7 +234,7 @@
     },
     {
       "day": 5,
-      "date": "2026-08-05",
+      "date": "2026-09-04",
       "title": "Limone sul Garda — West Shore",
       "stay_id": "lake-garda",
       "leg_miles": 55,
@@ -241,13 +251,13 @@
       "stops": [
         {
           "name": "Limone sul Garda",
-          "type": "sightseeing_dogs",
+          "type": "sightseeing",
           "detail": "Tiny lemon-grove village clinging to steep cliffs on the west shore. Terraced citrus gardens, colourful harbour, narrow lanes.",
           "maps_query": "Limone sul Garda BS Italy"
         },
         {
           "name": "Gargnano",
-          "type": "sightseeing_dogs",
+          "type": "sightseeing",
           "detail": "Quiet, authentic lakeside town — less touristy than most. Beautiful Art Nouveau villa gardens (Villa Feltrinelli).",
           "maps_query": "Gargnano BS Italy"
         }
@@ -256,18 +266,18 @@
         {
           "name": "TBD — Limone harbour lunch",
           "type": "lunch",
-          "dog_friendly": true
+          "dog_friendly": false
         }
       ],
       "notes": [
-        "West shore road (SS45bis) is narrow and twisty in places — allow extra time.",
+        "West shore road (SS45bis) is narrow and twisty — allow extra time.",
         "Limone gets very busy in summer — park early."
       ]
     },
     {
       "day": 6,
-      "date": "2026-08-06",
-      "title": "Lake Day — Water & Relaxation",
+      "date": "2026-09-05",
+      "title": "Lake Day — Swimming & Relaxation",
       "stay_id": "lake-garda",
       "leg_miles": 20,
       "leg_drive_hours": 0.5,
@@ -276,19 +286,19 @@
       "weather_url": "https://www.bbc.co.uk/weather/search?q=Lake+Garda",
       "map_waypoints": [
         "Lake Garda, Italy",
-        "TBD local beach or town, Lake Garda"
+        "Bardolino, VR, Italy"
       ],
       "stops": [
         {
-          "name": "TBD — Lake Swimming / Beach",
-          "type": "dog_walk",
-          "detail": "Relax day. Find a dog-friendly beach or lido. Many lakeside beaches allow dogs in quieter sections — check locally.",
-          "maps_query": "dog friendly beach Lake Garda"
+          "name": "TBD — Lake Swimming / Lido",
+          "type": "sightseeing",
+          "detail": "Relax day. Find a beach lido or public access point for swimming in the lake.",
+          "maps_query": "beach Lake Garda swimming"
         },
         {
-          "name": "TBD — Local town explore",
-          "type": "sightseeing_dogs",
-          "detail": "Explore whichever nearby town hasn't been visited yet. Bardolino, Garda town, or Torri del Benaco are all good options.",
+          "name": "Bardolino",
+          "type": "sightseeing",
+          "detail": "Charming wine town on the east shore. Famous for its Bardolino DOC red wine. Good piazza and lakefront.",
           "maps_query": "Bardolino VR Italy"
         }
       ],
@@ -296,97 +306,139 @@
         {
           "name": "TBD — lakeside lunch",
           "type": "lunch",
-          "dog_friendly": true
+          "dog_friendly": false
         },
         {
           "name": "TBD — farewell dinner",
           "type": "dinner",
-          "dog_friendly": true
+          "dog_friendly": false
         }
       ],
       "notes": [
         "Flexible day — use for anything missed earlier in the week.",
-        "Pack bags in the evening for early departure on Day 7."
+        "Bardolino wine tasting is a great late afternoon option."
       ]
     },
     {
       "day": 7,
-      "date": "2026-08-07",
-      "title": "Return — Fly Home",
-      "stay_id": null,
-      "leg_miles": 30,
-      "leg_drive_hours": 0.5,
-      "total_walk_miles": 1.0,
-      "flags": [],
+      "date": "2026-09-06",
+      "title": "Verona Day Trip",
+      "stay_id": "lake-garda",
+      "leg_miles": 50,
+      "leg_drive_hours": 1.5,
+      "total_walk_miles": 4.5,
+      "flags": ["highlight"],
       "weather_url": "https://www.bbc.co.uk/weather/search?q=Verona",
       "map_waypoints": [
         "Lake Garda, Italy",
-        "Verona Villafranca Airport VRN"
+        "Verona, VR, Italy",
+        "Lake Garda, Italy"
       ],
       "stops": [
         {
-          "name": "Verona Villafranca Airport",
+          "name": "Verona Old Town",
           "type": "sightseeing",
-          "detail": "Return hire car, check in, fly home. TBD — confirm flight times.",
-          "maps_query": "Verona Airport VRN Italy"
+          "detail": "UNESCO World Heritage city. Piazza Bra, the Arena amphitheatre, Piazza delle Erbe, Juliet's Balcony, Castelvecchio.",
+          "cost": "Arena ~€10pp; most piazzas free",
+          "maps_query": "Verona city centre VR Italy"
+        },
+        {
+          "name": "Verona Arena",
+          "type": "sightseeing",
+          "detail": "One of the best-preserved Roman amphitheatres in the world. Inside access ~€10pp.",
+          "cost": "~€10pp",
+          "url": "https://www.arena.it",
+          "maps_query": "Arena di Verona VR Italy"
+        }
+      ],
+      "eating": [
+        {
+          "name": "TBD — Verona piazza lunch",
+          "type": "lunch",
+          "dog_friendly": false
+        },
+        {
+          "name": "TBD — last night dinner at hotel or local",
+          "type": "dinner",
+          "dog_friendly": false
+        }
+      ],
+      "notes": [
+        "Last full day — pack bags in the evening ready for early departure tomorrow.",
+        "Verona is ~45 mins from most Lake Garda locations. Parking at Piazzale Cittadella or Park&Ride."
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2026-09-07",
+      "title": "Return — Fly Venice to Heathrow",
+      "stay_id": null,
+      "leg_miles": 60,
+      "leg_drive_hours": 1.5,
+      "total_walk_miles": 0.5,
+      "flags": [],
+      "weather_url": "https://www.bbc.co.uk/weather/search?q=Venice",
+      "map_waypoints": [
+        "Lake Garda, Italy",
+        "Venice Marco Polo Airport VCE"
+      ],
+      "stops": [
+        {
+          "name": "Venice Marco Polo Airport (VCE)",
+          "type": "sightseeing",
+          "detail": "Return hire car, check in. Flight VCE 14:20 → LHR 15:45 (BA Groups). Allow 2.5 hrs before departure for hire car return + check-in.",
+          "maps_query": "Venice Marco Polo Airport VCE Italy"
         }
       ],
       "eating": [],
       "notes": [
-        "TBD — confirm flight times. Allow 2 hrs before departure for hire car return + check-in.",
-        "Verona city is worth a stop if there's time before the flight (30 mins from airport)."
+        "Flight: BA VCE 14:20 → LHR 15:45. BA Groups booking.",
+        "Allow 2.5 hrs before departure — depart hotel by ~10:00 to allow for drive (~1.5 hrs) and hire car return.",
+        "Check out of hotel on morning of 7 Sep."
       ]
     }
   ],
 
   "bookings_required": [
     {
-      "item": "Flights (TBD)",
-      "status": "not_booked",
+      "item": "Flights — LHR ↔ VCE (British Airways Groups)",
+      "status": "booked",
       "priority": 1,
-      "url": "https://www.skyscanner.net",
-      "notes": "TBD — Luton/Heathrow to Verona (VRN) or Milan Bergamo (BGY)"
+      "url": "https://www.britishairways.com/travel/managebooking/public/en_gb",
+      "notes": "Outbound: 31 Aug LHR 11:50 → VCE 15:05. Inbound: 7 Sep VCE 14:20 → LHR 15:45. Mr & Mrs David Castledine."
     },
     {
-      "item": "Hire Car — Verona Airport",
+      "item": "Hotel Europa 4* — Superior Double Lake View (7 nights)",
+      "status": "booked",
+      "priority": 1,
+      "url": "https://www.booking.com",
+      "notes": "Check-in 31 Aug 2026, check-out 7 Sep 2026. Mr & Mrs David Castledine."
+    },
+    {
+      "item": "Hire Car — Venice Marco Polo Airport (VCE)",
       "status": "not_booked",
       "priority": 1,
       "url": "https://www.rentalcars.com",
-      "notes": "TBD — estate or large enough for 2 dogs"
-    },
-    {
-      "item": "Lake Garda Accommodation (6 nights)",
-      "status": "not_booked",
-      "priority": 1,
-      "url": "https://www.booking.com",
-      "notes": "TBD — decide on location: north (Riva) vs east (Malcesine) vs south (Sirmione)"
+      "notes": "Pick up 31 Aug after 15:05 arrival. Return morning of 7 Sep. Estate or large saloon."
     },
     {
       "item": "Monte Baldo Cable Car — Malcesine",
       "status": "not_booked",
       "priority": 2,
       "url": "https://www.funiviedelbaldo.it",
-      "notes": "Book in advance for August. Check dog policy."
+      "notes": "Book in advance for September. Day 3 (2 Sep)."
     },
     {
-      "item": "Pet Travel Documents (EU pet passport)",
+      "item": "Verona Arena — entry tickets",
       "status": "not_booked",
-      "priority": 1,
-      "url": "https://www.gov.uk/bring-pet-to-great-britain",
-      "notes": "Required for Koda and Monty to travel to Italy and return to UK"
+      "priority": 3,
+      "url": "https://www.arena.it",
+      "notes": "Day 7 (6 Sep). Optional — can queue on the day but pre-booking saves time."
     }
   ],
 
   "emergency_contacts": {
     "emergency": "112",
-    "nhs_non_emergency": "118",
-    "vets": [
-      {
-        "name": "TBD — local vet near accommodation",
-        "phone": "TBD",
-        "notes": "Research nearest 24hr vet once accommodation is confirmed"
-      }
-    ],
     "hospitals": [
       {
         "name": "Ospedale di Desenzano del Garda",
@@ -395,6 +447,10 @@
       {
         "name": "Ospedale Santa Chiara Trento (north lake)",
         "maps_query": "Ospedale Santa Chiara Trento"
+      },
+      {
+        "name": "Ospedale Civile Maggiore Verona",
+        "maps_query": "Ospedale Civile Maggiore Verona"
       }
     ]
   }

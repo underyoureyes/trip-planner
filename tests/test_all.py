@@ -122,9 +122,10 @@ def test_json_integrity():
     total_nights = sum(s["nights"] for s in stays)
     test("Total accommodation nights > 0", total_nights > 0, f"found {total_nights}")
 
-    # Dogs defined
+    # Dogs defined (optional — some trips have no dogs)
     dogs = data.get("trip", {}).get("dogs", [])
-    test("At least 1 dog defined", len(dogs) > 0, f"found {len(dogs)}")
+    if dogs:
+        test("Dogs defined with max_walk_miles", True, f"found {len(dogs)}")
     for dog in dogs:
         test(f"Dog '{dog.get('name','?')}' has max_walk_miles defined",
              "max_walk_miles" in dog)
@@ -141,6 +142,9 @@ def test_json_integrity():
 def test_walking_limits():
     data = load_json()
     dogs = data["trip"]["dogs"]
+    if not dogs:
+        print("\n── 2. Walking Distance Limits (no dogs — skipping) ───────────────")
+        return
     limit_dog = min(dogs, key=lambda d: d["max_walk_miles"])
     max_walk = limit_dog["max_walk_miles"]
     print(f"\n── 2. Walking Distance Limits ({limit_dog['name']}: {max_walk} miles max) ──────────────")
@@ -456,7 +460,7 @@ def test_consistency():
              snippet in html)
 
     # Emergency contacts in HTML
-    for vet in data["emergency_contacts"]["vets"]:
+    for vet in data.get("emergency_contacts", {}).get("vets", []):
         phone = vet["phone"]
         test(f"Vet phone {phone} in HTML", phone in html)
 
