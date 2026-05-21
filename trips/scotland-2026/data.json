@@ -198,7 +198,7 @@
         {
           "name": "Tebay Services (M6 J38)",
           "type": "lunch_fuel",
-          "detail": "Best motorway services in UK. Farm shop, outdoor seating, dog walk field. Aim ~13:00. Fuel here is expensive \u2014 Penrith Tesco (J40, 5 min off motorway) is significantly cheaper if the tank is low.",
+          "detail": "Best motorway services in UK. Farm shop, outdoor seating, dog walk field. Aim ~13:00. Fuel here is expensive \u2014 Penrith Tesco (J40, 5 min off motorway) is significantly cheaper if the tank is low. Dogs: welcome in foyer areas only \u2014 not permitted in the Kitchen dining room. Outdoor options: woodland picnic area and duck pond seating (both traffic-free, dog-friendly). Dog walk along Howgill Fells path (keep on lead, poo bins provided). Adjacent Westmorland Hotel (same site) serves dinner 18:00\u201321:00 at the Bretherdale restaurant \u2014 pet-friendly rooms available if ever needed (dog bowls, Lily\u2019s Kitchen treats, cork floors; book direct on 015396 24351).",
           "maps_query": "Tebay Services Westmorland M6 northbound"
         },
         {
@@ -212,9 +212,12 @@
       ],
       "eating": [
         {
-          "name": "Tebay Services",
+          "name": "Tebay Services Farm Kitchen",
           "type": "lunch",
-          "dog_friendly": true
+          "dog_friendly": true,
+          "detail": "Dogs in foyer areas only — not in the Kitchen dining room. Eat at the outdoor duck pond or woodland picnic tables with the dogs, or one person orders while the other stays in the foyer with them.",
+          "url": "https://www.tebayservices.com/kitchen/",
+          "maps_query": "Tebay Services Westmorland M6 northbound"
         },
         {
           "name": "Smiths at Gretna Green",
