@@ -326,14 +326,6 @@
           "detail": "3km from Riva (€8 taxi). World-famous rock climbing destination. The ruined castle above the town is a short but steep walk (~1,500 steps return, 20 min). Lovely central piazza and coffee shops below for a post-walk espresso.",
           "cost": "Castle free",
           "maps_query": "Arco castello TN Italy"
-        },
-        {
-          "name": "GOLF OPTION — Golf Bogliaco (18 holes, west shore)",
-          "type": "golf",
-          "detail": "Nearest proper golf course to the hotel — Golf Bogliaco, one of Italy's oldest clubs (founded early 1900s by the Beretta family). 18-hole PAR 70 on the west shore at Gargnano, ~13 miles south from Riva. Stunning lake views and Mediterranean vegetation. Green fees ~€50-70. Taxi from hotel ~€35 each way (or arrange with concierge). Call ahead to book a tee time — walk-ins sometimes available. Allow half a day.",
-          "cost": "Green fee ~€50-70; taxi ~€35 each way",
-          "url": "https://www.golfbogliaco.com/en/",
-          "maps_query": "Golf Bogliaco Gargnano BS Italy"
         }
       ],
       "eating": [
@@ -673,13 +665,6 @@
       "priority": 4,
       "url": "https://www.cascata-varone.com/en/",
       "notes": "Day 4 free day. 3km from hotel (€8 taxi). ~€7pp entry. No advance booking needed."
-    },
-    {
-      "item": "Golf Bogliaco — tee time (Day 4, if playing golf)",
-      "status": "not_booked",
-      "priority": 4,
-      "url": "https://www.golfbogliaco.com/en/",
-      "notes": "18-hole PAR 70 on west shore, ~13 miles from Riva. Green fee ~€50-70. Taxi each way ~€35. Call ahead to book tee time. Day 4 free day only — no other free days available."
     }
   ],
 
