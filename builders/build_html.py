@@ -823,6 +823,7 @@ def build_stops_card(day, stays_map):
         acc_query = stay.get('location', stay['name'])
         map_link = f'<a class="stop-link" href="{maps_search(acc_query)}" target="_blank">📍 Map</a>'
         web_link = f'<a class="stop-link green-link" href="{h(acc_url)}" target="_blank" style="margin-left:6px">🌐 Website</a>' if acc_url else ''
+        is_checkin_day = day.get('date') == stay.get('checkin')
         detail_parts = []
         if stay.get('location'):
             detail_parts.append(h(stay['location']))
@@ -835,16 +836,16 @@ def build_stops_card(day, stays_map):
             if cout:
                 times.append(f'Checkout {cout}')
             detail_parts.append(' · '.join(times))
-        if stay.get('access'):
+        if is_checkin_day and stay.get('access'):
             detail_parts.append(f'🔑 {h(stay["access"])}')
         if stay.get('what3words'):
             w3w = h(stay['what3words'])
             detail_parts.append(f'///{w3w}')
         acc_detail = ' — '.join(detail_parts)
         extra_lines = ''
-        if stay.get('directions'):
+        if is_checkin_day and stay.get('directions'):
             extra_lines += f'\n        <div class="stop-detail">🗺 {h(stay["directions"])}</div>'
-        if stay.get('hot_water'):
+        if is_checkin_day and stay.get('hot_water'):
             extra_lines += f'\n        <div class="stop-detail">🚿 {h(stay["hot_water"])}</div>'
         items.append(f"""    <div class="stop-item">
       <div class="stop-left"><div class="stop-dot end">{stay_emoji}</div></div>
