@@ -841,11 +841,16 @@ def build_stops_card(day, stays_map):
             w3w = h(stay['what3words'])
             detail_parts.append(f'///{w3w}')
         acc_detail = ' — '.join(detail_parts)
+        extra_lines = ''
+        if stay.get('directions'):
+            extra_lines += f'\n        <div class="stop-detail">🗺 {h(stay["directions"])}</div>'
+        if stay.get('hot_water'):
+            extra_lines += f'\n        <div class="stop-detail">🚿 {h(stay["hot_water"])}</div>'
         items.append(f"""    <div class="stop-item">
       <div class="stop-left"><div class="stop-dot end">{stay_emoji}</div></div>
       <div class="stop-right">
         <div class="stop-name">{acc_name} — {night_str}</div>
-        <div class="stop-detail">{acc_detail}</div>
+        <div class="stop-detail">{acc_detail}</div>{extra_lines}
         {map_link}{web_link}
       </div>
     </div>""")
