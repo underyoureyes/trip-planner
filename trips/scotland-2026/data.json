@@ -257,20 +257,28 @@
       "stay_id": "rowardennan",
       "leg_miles": 220,
       "leg_drive_hours": 4.0,
-      "total_walk_miles": 2.0,
+      "total_walk_miles": 3.0,
       "map_waypoints": [
         "Gretna DG16",
+        "Bothwell Castle Uddingston G71 8BL",
         "Chatelherault Country Park Hamilton ML3 7UE",
+        "Dumbarton Castle G82 1JF",
         "Loch Lomond Shores Balloch G83 8QL",
+        "Duncryne Hill Gartocharn G83 8NE",
         "Drymen The Square G63 0BL",
-        "Rowardennan Loch Lomond G63 0AR"
+        "Balmaha G63 0JQ",
+        "Cashel Forest Rowardennan G63 0AW",
+        "Rowardennan Hotel G63 0AR"
       ],
       "stops": [
         {
-          "name": "Co-op Food — Balloch (stock-up point)",
-          "type": "supplies",
-          "detail": "Pass through Balloch on the way to Rowardennan — best chance to stock up before the remote loch-side road. Carrochan Road, G83 8BW. Open every day 07:00–22:00. Morrisons in Alexandria (~4 miles) for a bigger shop.",
-          "maps_query": "Co-op Food Carrochan Road Balloch G83 8BW"
+          "name": "Bothwell Castle, Uddingston",
+          "type": "sightseeing_dogs",
+          "detail": "Scotland's finest medieval castle ruin — huge 13th-century Donjon tower on a wooded bluff above the River Clyde. M74 J4, ~2 miles off route. Dogs on lead in grounds. Allow 20–30 min. Historic Environment Scotland site — entry fee; HES members free.",
+          "cost": "~£8pp (HES members free)",
+          "url": "https://www.historicenvironment.scot/visit-a-place/places/bothwell-castle/",
+          "maps_query": "Bothwell Castle Uddingston G71 8BL",
+          "walk_miles": 0.3
         },
         {
           "name": "Chatelherault Country Park, Hamilton",
@@ -281,16 +289,58 @@
           "maps_query": "Chatelherault Country Park Hamilton ML3 7UE"
         },
         {
+          "name": "Dumbarton Castle — roadside photo stop",
+          "type": "photo_stop",
+          "detail": "Medieval castle on a dramatic 73m volcanic rock at the Clyde/Leven confluence — directly on the A82, zero detour. Dogs not permitted inside but the riverside park at the base is a great 10-min leg-stretch with the castle as backdrop. Mary Queen of Scots left for France from here aged 5.",
+          "cost": "Free (exterior)",
+          "maps_query": "Dumbarton Castle G82 1JF",
+          "walk_miles": 0.2
+        },
+        {
+          "name": "Co-op Food — Balloch (stock-up point)",
+          "type": "supplies",
+          "detail": "Pass through Balloch on the way to Rowardennan — best chance to stock up before the remote loch-side road. Carrochan Road, G83 8BW. Open every day 07:00–22:00. Morrisons in Alexandria (~4 miles) for a bigger shop.",
+          "maps_query": "Co-op Food Carrochan Road Balloch G83 8BW"
+        },
+        {
           "name": "Loch Lomond Shores, Balloch",
           "type": "dog_walk",
           "detail": "First sight of the loch. Lochside boardwalk, cafes, dog walk. 30 min stop.",
-          "maps_query": "Loch Lomond Shores Balloch G83"
+          "maps_query": "Loch Lomond Shores Balloch G83",
+          "walk_miles": 0.3
+        },
+        {
+          "name": "Duncryne Hill ('The Dumpling'), Gartocharn",
+          "type": "sightseeing_dogs",
+          "detail": "Hidden gem — a tiny round volcanic hill (142m) just off the A811 at Gartocharn giving what many regard as the finest panoramic view of Loch Lomond for the least effort anywhere: islands, Ben Lomond and the Highlands spread out below you. 35–40 min walk up and back, 88m ascent. Dogs welcome on open access land — on lead near livestock. Small layby parking on Duncryne Road (G83 8NE). Free.",
+          "cost": "Free",
+          "url": "https://www.walkhighlands.co.uk/lochlomond/duncryne.shtml",
+          "maps_query": "Duncryne Hill Gartocharn G83 8NE",
+          "walk_miles": 1.0
         },
         {
           "name": "Drymen Co-op",
           "type": "supplies",
           "detail": "Last shop before Rowardennan. Stock up for 3 nights. Mon-Sat 07:00-22:00, Sun 08:00-20:00.",
           "maps_query": "Drymen The Square G63 0BL"
+        },
+        {
+          "name": "Balmaha Bay & Jetty",
+          "type": "photo_stop",
+          "detail": "Lochside jetty facing west across to Inchcailloch island — great afternoon light over the water with Ben Lomond behind. 10–15 min stop. National Park car park on site (£2.10/2hrs). Dogs welcome on the shore.",
+          "cost": "£2.10 parking",
+          "url": "https://www.lochlomond-trossachs.org/discover-the-park/towns-villages/balmaha/",
+          "maps_query": "Balmaha Bay Loch Lomond G63 0JQ",
+          "walk_miles": 0.2
+        },
+        {
+          "name": "Cashel Forest, East Loch Lomond",
+          "type": "sightseeing_dogs",
+          "detail": "Millennium native woodland on the lochside, directly on the B837 between Balmaha and Rowardennan — zero detour. Waymarked trails with viewpoint platforms looking across to Ben Lomond. Dogs welcome throughout. Red squirrels, roe deer, osprey on the loch. £3 car park (cash or contactless).",
+          "cost": "£3 parking",
+          "url": "https://cashel.org.uk",
+          "maps_query": "Cashel Forest Loch Lomond G63 0AW",
+          "walk_miles": 0.5
         }
       ],
       "eating": [
