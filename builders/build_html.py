@@ -268,6 +268,20 @@ CSS = """
   .map-btn-text { line-height: 1.2; }
   .map-btn-text small { display: block; font-size: 12px; font-weight: 400; opacity: 0.85; margin-top: 1px; }
 
+  /* ── Map tip ─────────────────────────────────────────────── */
+  .map-tip {
+    background: #f0f4fa;
+    border-left: 3px solid var(--sky);
+    border-radius: 8px;
+    padding: 9px 13px;
+    font-size: 12px;
+    color: var(--slate);
+    line-height: 1.45;
+    margin-bottom: 14px;
+    margin-top: -8px;
+  }
+  .map-tip strong { color: var(--sky); }
+
   /* ── Weather button ───────────────────────────────────────── */
   .weather-btn {
     display: flex;
@@ -747,7 +761,7 @@ def build_overview(days):
 def stop_links(stop):
     parts = []
     if stop.get('maps_query'):
-        parts.append(f'<a class="stop-link" href="{maps_search(stop["maps_query"])}" target="_blank">📍 Map</a>')
+        parts.append(f'<a class="stop-link" href="{maps_search(stop["maps_query"])}" target="_blank">📍 Navigate</a>')
     if stop.get('url'):
         label = '🌐 Book' if stop.get('book_ahead') else '🌐 Website'
         if stop.get('status') == 'not_bookable':
@@ -821,7 +835,7 @@ def build_stops_card(day, stays_map):
         acc_name = h(stay['name'])
         acc_url = stay.get('url', '')
         acc_query = stay.get('location', stay['name'])
-        map_link = f'<a class="stop-link" href="{maps_search(acc_query)}" target="_blank">📍 Map</a>'
+        map_link = f'<a class="stop-link" href="{maps_search(acc_query)}" target="_blank">📍 Navigate</a>'
         web_link = f'<a class="stop-link green-link" href="{h(acc_url)}" target="_blank" style="margin-left:6px">🌐 Website</a>' if acc_url else ''
         is_checkin_day = day.get('date') == stay.get('checkin')
         detail_parts = []
@@ -1075,6 +1089,7 @@ def build_day_section(day, stays_map, dogs=None):
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>{h(subtitle)}</small></div>
   </a>
+  <div class="map-tip">💡 Missed or skipping a stop? Tap <strong>📍 Navigate</strong> on any stop below to go straight there — no need to restart the full route.</div>
   {'<a class="weather-btn" href="' + h(weather_url) + '" target="_blank">🌤 Check BBC Weather for today</a>' if weather_url else ''}
 {stops_card}
 {notes_card}

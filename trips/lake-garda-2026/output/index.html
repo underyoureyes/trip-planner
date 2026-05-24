@@ -208,6 +208,20 @@
   .map-btn-text { line-height: 1.2; }
   .map-btn-text small { display: block; font-size: 12px; font-weight: 400; opacity: 0.85; margin-top: 1px; }
 
+  /* ── Map tip ─────────────────────────────────────────────── */
+  .map-tip {
+    background: #f0f4fa;
+    border-left: 3px solid var(--sky);
+    border-radius: 8px;
+    padding: 9px 13px;
+    font-size: 12px;
+    color: var(--slate);
+    line-height: 1.45;
+    margin-bottom: 14px;
+    margin-top: -8px;
+  }
+  .map-tip strong { color: var(--sky); }
+
   /* ── Weather button ───────────────────────────────────────── */
   .weather-btn {
     display: flex;
@@ -559,7 +573,7 @@
     <div class="hero-chip">🚗 Coach Tour (transport provided)</div>
     <div class="hero-chip">8 days</div>
     
-    <div class="hero-chip" style="opacity:0.6;font-size:11px">Built 21 May 2026 20:11</div>
+    <div class="hero-chip" style="opacity:0.6;font-size:11px">Built 24 May 2026 19:14</div>
   </div>
 </div>
 <!-- ── Nav ──────────────────────────────────────────────────────────────────── -->
@@ -656,6 +670,7 @@
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>Venice Marco Polo Airport VCE Italy → Riva del Garda TN Italy</small></div>
   </a>
+  <div class="map-tip">💡 Missed or skipping a stop? Tap <strong>📍 Navigate</strong> on any stop below to go straight there — no need to restart the full route.</div>
   <a class="weather-btn" href="https://www.accuweather.com/en/it/riva-del-garda/1705/weather-forecast/1705" target="_blank">🌤 Check BBC Weather for today</a>
   <div class="stops-card">
     <div class="stops-card-title">Stops &amp; places of interest</div>
@@ -664,7 +679,7 @@
       <div class="stop-right">
         <div class="stop-name">Venice Marco Polo Airport (VCE)</div>
         <div class="stop-detail">Depart LHR 11:50, arrive VCE 15:05. Meet tour guide at arrivals — coach transfer to Riva del Garda (~1.5 hrs). Arrive hotel approximately 16:30–17:00.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Venice+Marco+Polo+Airport+VCE+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Venice+Marco+Polo+Airport+VCE+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -672,7 +687,7 @@
       <div class="stop-right">
         <div class="stop-name">Piazza III Novembre — evening orientation walk</div>
         <div class="stop-detail">The hotel is on Piazza Catena, 2 min walk from Piazza III Novembre — the beautiful main lakeside square. Take a gentle stroll along the Lungolago (lakefront promenade). Flat, easy, ~1.5 miles. Perfect for shaking off the flight. ~3,000 steps.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+III+Novembre+Riva+del+Garda+TN+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+III+Novembre+Riva+del+Garda+TN+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -680,7 +695,7 @@
       <div class="stop-right">
         <div class="stop-name">Aperitivo on the lakefront</div>
         <div class="stop-detail">Italian ritual — find a terrace bar on or near Piazza III Novembre. Spritz Aperol or local Trentino wine with olives and cicchetti (small bites) included. Best way to arrive in Italy. ~17:30-18:30.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=bar+aperitivo+Piazza+III+Novembre+Riva+del+Garda" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=bar+aperitivo+Piazza+III+Novembre+Riva+del+Garda" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -688,7 +703,7 @@
       <div class="stop-right">
         <div class="stop-name">Hotel Europa SkyPool &amp; Panorama 4* — 7 nights</div>
         <div class="stop-detail">Piazza Catena 13, Riva del Garda, TN, Italy</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Map</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Navigate</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
   </div>
@@ -724,6 +739,7 @@
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>Riva del Garda TN Italy → Sirmione BS Italy → Lazise VR Italy → Riva del Garda TN Italy</small></div>
   </a>
+  <div class="map-tip">💡 Missed or skipping a stop? Tap <strong>📍 Navigate</strong> on any stop below to go straight there — no need to restart the full route.</div>
   <a class="weather-btn" href="https://www.accuweather.com/en/it/sirmione/209073/weather-forecast/209073" target="_blank">🌤 Check BBC Weather for today</a>
   <div class="stops-card">
     <div class="stops-card-title">Stops &amp; places of interest</div>
@@ -732,7 +748,7 @@
       <div class="stop-right">
         <div class="stop-name">Sirmione Peninsula</div>
         <div class="stop-detail">Narrow medieval peninsula jutting into the lake. Walk the old town walls and lakeside promenade. Very busy in September — stay with the group.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Sirmione+BS+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Sirmione+BS+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -740,7 +756,7 @@
       <div class="stop-right">
         <div class="stop-name">Scaligero Castle, Sirmione</div>
         <div class="stop-detail">Well-preserved 13th-century moated castle with lake views. One of the best-preserved Scaligero fortresses.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Castello+Scaligero+Sirmione+BS+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Castello+Scaligero+Sirmione+BS+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -748,7 +764,7 @@
       <div class="stop-right">
         <div class="stop-name">Lazise</div>
         <div class="stop-detail">Charming walled village on the east shore. Lakeside walk, piazza cafés, intact medieval walls.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Lazise+VR+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Lazise+VR+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -756,7 +772,7 @@
       <div class="stop-right">
         <div class="stop-name">Hotel Europa SkyPool &amp; Panorama 4* — 7 nights</div>
         <div class="stop-detail">Piazza Catena 13, Riva del Garda, TN, Italy</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Map</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Navigate</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
   </div>
@@ -790,6 +806,7 @@
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>Riva del Garda TN Italy → Malcesine VR Italy → Riva del Garda TN Italy</small></div>
   </a>
+  <div class="map-tip">💡 Missed or skipping a stop? Tap <strong>📍 Navigate</strong> on any stop below to go straight there — no need to restart the full route.</div>
   <a class="weather-btn" href="https://www.accuweather.com/en/it/malcesine/213498/weather-forecast/213498" target="_blank">🌤 Check BBC Weather for today</a>
   <div class="stops-card">
     <div class="stops-card-title">Stops &amp; places of interest</div>
@@ -798,7 +815,7 @@
       <div class="stop-right">
         <div class="stop-name">Malcesine Old Town</div>
         <div class="stop-detail">Prettiest village on the east shore. Castello Scaligero di Malcesine overlooks the lake. Narrow car-free alleys and lakeside cafés.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Malcesine+VR+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Malcesine+VR+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -806,7 +823,7 @@
       <div class="stop-right">
         <div class="stop-name">Monte Baldo Cable Car</div>
         <div class="stop-detail">Rotating cable car to 1,760m. Panoramic views over the lake and Alps. Spectacular. Book in advance for September — this sells out.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Funivie+del+Baldo+Malcesine+VR+Italy" target="_blank">📍 Map</a> <a class="stop-link green-link" href="https://www.funiviedelbaldo.it" target="_blank" style="margin-left:6px">🌐 Book</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Funivie+del+Baldo+Malcesine+VR+Italy" target="_blank">📍 Navigate</a> <a class="stop-link green-link" href="https://www.funiviedelbaldo.it" target="_blank" style="margin-left:6px">🌐 Book</a>
       </div>
     </div>
     <div class="stop-item">
@@ -814,7 +831,7 @@
       <div class="stop-right">
         <div class="stop-name">CCT Bike Rental — Malcesine (optional)</div>
         <div class="stop-detail">CCT Bike Rental has a pickup point in Malcesine. E-MTB and trekking bikes available if you want to explore the lake path independently on the return. Book online in advance.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=bike+hire+Malcesine+VR+Italy" target="_blank">📍 Map</a> <a class="stop-link green-link" href="https://www.cctbikerental.com/rentals/garda-bike-rentals/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=bike+hire+Malcesine+VR+Italy" target="_blank">📍 Navigate</a> <a class="stop-link green-link" href="https://www.cctbikerental.com/rentals/garda-bike-rentals/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
     <div class="stop-item">
@@ -822,7 +839,7 @@
       <div class="stop-right">
         <div class="stop-name">Hotel Europa SkyPool &amp; Panorama 4* — 7 nights</div>
         <div class="stop-detail">Piazza Catena 13, Riva del Garda, TN, Italy</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Map</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Navigate</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
   </div>
@@ -856,6 +873,7 @@
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>Riva del Garda TN Italy → CCT bike rental Arco TN Italy → Torbole sul Garda TN Italy → Bastione Riva del Garda TN Italy</small></div>
   </a>
+  <div class="map-tip">💡 Missed or skipping a stop? Tap <strong>📍 Navigate</strong> on any stop below to go straight there — no need to restart the full route.</div>
   <a class="weather-btn" href="https://www.accuweather.com/en/it/riva-del-garda/1705/weather-forecast/1705" target="_blank">🌤 Check BBC Weather for today</a>
   <div class="stops-card">
     <div class="stops-card-title">Stops &amp; places of interest</div>
@@ -864,7 +882,7 @@
       <div class="stop-right">
         <div class="stop-name">MORNING — Road Bike Hire: Riva → Torbole → Nago loop</div>
         <div class="stop-detail">Book a road bike or e-bike at CCT Bike Rental (Arco, 3km from hotel — €8 taxi each way). Head north along the flat lakeside path from Riva to Torbole (~8km), then continue to Nago viewpoint if legs allow. Return the same route. Total ~28-32km, 2–3 hours riding, almost no elevation on the lakeside path. Riva → Torbole is one of the best easy flat rides on the lake. Start ~08:30-09:00 to be back for a late lunch. Book the bike online at least 2 days ahead.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=CCT+bike+rental+Arco+TN+Italy" target="_blank">📍 Map</a> <a class="stop-link green-link" href="https://www.cctbikerental.com/rentals/garda-bike-rentals/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=CCT+bike+rental+Arco+TN+Italy" target="_blank">📍 Navigate</a> <a class="stop-link green-link" href="https://www.cctbikerental.com/rentals/garda-bike-rentals/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
     <div class="stop-item">
@@ -872,7 +890,7 @@
       <div class="stop-right">
         <div class="stop-name">AFTERNOON — Bastione Fortress walk</div>
         <div class="stop-detail">After the morning ride, a gentle afternoon option. Iconic 16th-century Venetian tower above the town — 30 min walk up through olive groves from Piazza III Novembre. Panoramic views over Riva and the lake. Easy well-signposted path. ~2,000 steps up and back. Free.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Bastione+Riva+del+Garda+TN+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Bastione+Riva+del+Garda+TN+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -880,7 +898,7 @@
       <div class="stop-right">
         <div class="stop-name">AFTERNOON (alt) — Cascata del Varone waterfall</div>
         <div class="stop-detail">Dramatic gorge waterfall 3km from Riva centre — taxi ~€8 each way or 35 min walk. Two viewing platforms inside the gorge — genuinely spectacular. About 1,000 steps on site. A good shaded option on a hot afternoon.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Cascata+del+Varone+Riva+del+Garda+TN+Italy" target="_blank">📍 Map</a> <a class="stop-link green-link" href="https://www.cascata-varone.com/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Cascata+del+Varone+Riva+del+Garda+TN+Italy" target="_blank">📍 Navigate</a> <a class="stop-link green-link" href="https://www.cascata-varone.com/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
     <div class="stop-item">
@@ -888,7 +906,7 @@
       <div class="stop-right">
         <div class="stop-name">AFTERNOON (alt) — Arco medieval town &amp; castle</div>
         <div class="stop-detail">3km from Riva (€8 taxi). World-famous rock climbing destination. The ruined castle above the town is a short but steep walk (~1,500 steps return, 20 min). Lovely central piazza and coffee shops below for a post-walk espresso.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Arco+castello+TN+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Arco+castello+TN+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -896,7 +914,7 @@
       <div class="stop-right">
         <div class="stop-name">Hotel Europa SkyPool &amp; Panorama 4* — 7 nights</div>
         <div class="stop-detail">Piazza Catena 13, Riva del Garda, TN, Italy</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Map</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Navigate</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
   </div>
@@ -933,6 +951,7 @@
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>Riva del Garda TN Italy → Limone sul Garda BS Italy → Gargnano BS Italy → Riva del Garda TN Italy</small></div>
   </a>
+  <div class="map-tip">💡 Missed or skipping a stop? Tap <strong>📍 Navigate</strong> on any stop below to go straight there — no need to restart the full route.</div>
   <a class="weather-btn" href="https://www.accuweather.com/en/it/riva-del-garda/1705/weather-forecast/1705" target="_blank">🌤 Check BBC Weather for today</a>
   <div class="stops-card">
     <div class="stops-card-title">Stops &amp; places of interest</div>
@@ -941,7 +960,7 @@
       <div class="stop-right">
         <div class="stop-name">Limone sul Garda</div>
         <div class="stop-detail">Tiny lemon-grove village clinging to steep cliffs on the west shore. Terraced citrus gardens, colourful harbour, narrow lanes. Very popular — stay with the coach group.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Limone+sul+Garda+BS+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Limone+sul+Garda+BS+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -949,7 +968,7 @@
       <div class="stop-right">
         <div class="stop-name">Gargnano</div>
         <div class="stop-detail">Quiet, authentic lakeside town — less touristy than most. Beautiful Art Nouveau villa gardens. Worth a slower wander.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Gargnano+BS+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Gargnano+BS+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -957,7 +976,7 @@
       <div class="stop-right">
         <div class="stop-name">Hotel Europa SkyPool &amp; Panorama 4* — 7 nights</div>
         <div class="stop-detail">Piazza Catena 13, Riva del Garda, TN, Italy</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Map</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Navigate</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
   </div>
@@ -991,6 +1010,7 @@
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>Riva del Garda TN Italy → Bardolino VR Italy → Lazise VR Italy → Riva del Garda TN Italy</small></div>
   </a>
+  <div class="map-tip">💡 Missed or skipping a stop? Tap <strong>📍 Navigate</strong> on any stop below to go straight there — no need to restart the full route.</div>
   <a class="weather-btn" href="https://www.accuweather.com/en/it/bardolino/207424/weather-forecast/207424" target="_blank">🌤 Check BBC Weather for today</a>
   <div class="stops-card">
     <div class="stops-card-title">Stops &amp; places of interest</div>
@@ -999,7 +1019,7 @@
       <div class="stop-right">
         <div class="stop-name">Lake Swimming — Lido or beach</div>
         <div class="stop-detail">Coach stops at a lake lido or beach for swimming. September water temperature is excellent (~22-24°C). Bring swimwear and towel.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=spiaggia+lido+Bardolino+VR+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=spiaggia+lido+Bardolino+VR+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -1007,7 +1027,7 @@
       <div class="stop-right">
         <div class="stop-name">Bardolino — Wine Tasting at Cantina Zeni</div>
         <div class="stop-detail">Bardolino is the home of Bardolino DOC red wine. Cantina Zeni is a well-known family winery open for walk-in tasting. Also: Guerrieri Rizzardi cantina nearby. Try the young Bardolino and the fuller Bardolino Classico Superiore.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Cantina+Zeni+Bardolino+VR+Italy" target="_blank">📍 Map</a> <a class="stop-link green-link" href="https://www.zeni.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Cantina+Zeni+Bardolino+VR+Italy" target="_blank">📍 Navigate</a> <a class="stop-link green-link" href="https://www.zeni.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
     <div class="stop-item">
@@ -1015,7 +1035,7 @@
       <div class="stop-right">
         <div class="stop-name">SUP or kayak hire — Riva lakefront (alternative quiet day)</div>
         <div class="stop-detail">If you prefer to stay local, Riva&#x27;s waterfront has SUP and kayak hire for a relaxed lake day without the coach. World-class conditions for beginners.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=SUP+kayak+paddleboard+hire+Riva+del+Garda+TN+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=SUP+kayak+paddleboard+hire+Riva+del+Garda+TN+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -1023,7 +1043,7 @@
       <div class="stop-right">
         <div class="stop-name">Hotel Europa SkyPool &amp; Panorama 4* — 7 nights</div>
         <div class="stop-detail">Piazza Catena 13, Riva del Garda, TN, Italy</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Map</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Navigate</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
   </div>
@@ -1057,6 +1077,7 @@
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>Riva del Garda TN Italy → Verona VR Italy → Riva del Garda TN Italy</small></div>
   </a>
+  <div class="map-tip">💡 Missed or skipping a stop? Tap <strong>📍 Navigate</strong> on any stop below to go straight there — no need to restart the full route.</div>
   <a class="weather-btn" href="https://www.accuweather.com/en/it/verona/214068/weather-forecast/214068" target="_blank">🌤 Check BBC Weather for today</a>
   <div class="stops-card">
     <div class="stops-card-title">Stops &amp; places of interest</div>
@@ -1065,7 +1086,7 @@
       <div class="stop-right">
         <div class="stop-name">Verona Old Town</div>
         <div class="stop-detail">UNESCO World Heritage city. Piazza Bra, the Arena amphitheatre, Piazza delle Erbe, Juliet&#x27;s Balcony (Casa di Giulietta), Castelvecchio and the Ponte Scaligero bridge.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Verona+city+centre+Piazza+Bra+VR+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Verona+city+centre+Piazza+Bra+VR+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
     <div class="stop-item">
@@ -1073,7 +1094,7 @@
       <div class="stop-right">
         <div class="stop-name">Verona Arena</div>
         <div class="stop-detail">One of the best-preserved Roman amphitheatres in the world — 1st century AD. Inside access ~€10pp. Outstanding engineering up close.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Arena+di+Verona+VR+Italy" target="_blank">📍 Map</a> <a class="stop-link green-link" href="https://www.arena.it" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Arena+di+Verona+VR+Italy" target="_blank">📍 Navigate</a> <a class="stop-link green-link" href="https://www.arena.it" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
     <div class="stop-item">
@@ -1081,7 +1102,7 @@
       <div class="stop-right">
         <div class="stop-name">Hotel Europa SkyPool &amp; Panorama 4* — 7 nights</div>
         <div class="stop-detail">Piazza Catena 13, Riva del Garda, TN, Italy</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Map</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Piazza+Catena+13,+Riva+del+Garda,+TN,+Italy" target="_blank">📍 Navigate</a><a class="stop-link green-link" href="https://www.hoteleuropariva.it/en/" target="_blank" style="margin-left:6px">🌐 Website</a>
       </div>
     </div>
   </div>
@@ -1116,6 +1137,7 @@
     <span class="map-icon">🗺</span>
     <div class="map-btn-text">Open full route in Maps<small>Riva del Garda TN Italy → Venice Marco Polo Airport VCE Italy</small></div>
   </a>
+  <div class="map-tip">💡 Missed or skipping a stop? Tap <strong>📍 Navigate</strong> on any stop below to go straight there — no need to restart the full route.</div>
   <a class="weather-btn" href="https://www.accuweather.com/en/it/venice/214727/weather-forecast/214727" target="_blank">🌤 Check BBC Weather for today</a>
   <div class="stops-card">
     <div class="stops-card-title">Stops &amp; places of interest</div>
@@ -1124,7 +1146,7 @@
       <div class="stop-right">
         <div class="stop-name">Venice Marco Polo Airport (VCE)</div>
         <div class="stop-detail">Coach transfer from hotel to VCE (~1.5 hrs). Flight VCE 14:20 → LHR 15:45 (BA Groups). Confirm exact coach departure time with tour guide the evening before.</div>
-        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Venice+Marco+Polo+Airport+VCE+Italy" target="_blank">📍 Map</a>
+        <a class="stop-link" href="https://www.google.com/maps/search/?api=1&query=Venice+Marco+Polo+Airport+VCE+Italy" target="_blank">📍 Navigate</a>
       </div>
     </div>
   </div>
