@@ -257,8 +257,8 @@
       "date": "2026-05-24",
       "title": "Gretna Green → Rowardennan",
       "stay_id": "rowardennan",
-      "leg_miles": 220,
-      "leg_drive_hours": 4.0,
+      "leg_miles": 160,
+      "leg_drive_hours": 3.5,
       "total_walk_miles": 3.0,
       "map_waypoints": [
         "Gretna DG16",

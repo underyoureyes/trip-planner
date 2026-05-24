@@ -818,6 +818,105 @@ def test_google_maps_urls():
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# TEST 13 — URL RELEVANCE (domain sanity + optional title check)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Domains that should only appear on stays, not on sightseeing/eating stops
+ACCOM_DOMAINS = {
+    'airbnb.co.uk', 'airbnb.com', 'booking.com', 'vrbo.com',
+    'holiday-lettings.co.uk', 'hoseasons.co.uk', 'cottages.com',
+    'syha.org.uk', 'hostellingscotland.org.uk',
+}
+
+# Keywords in page titles that suggest accommodation content (for live title check)
+ACCOM_TITLE_KEYWORDS = [
+    'cottage', 'holiday let', 'self catering', 'self-catering',
+    'bed and breakfast', 'b&b', 'holiday rental', 'holiday home',
+    'holiday park', 'lodge rental', 'lodge hire',
+]
+
+# Stop types that ARE accommodation — allowed to link to accom domains
+ACCOM_STOP_TYPES = {'stay', 'airbnb', 'hotel', 'booking_com'}
+
+
+def _collect_stop_urls(data):
+    """Yield (context, stop_type, name, url) for every stop/eating entry with a URL."""
+    for day in data.get('days', []):
+        d = day['day']
+        for s in day.get('stops', []):
+            if s.get('url'):
+                yield (f'Day {d} stop', s.get('type', ''), s['name'], s['url'])
+        for e in day.get('eating', []):
+            if e.get('url'):
+                yield (f'Day {d} eating', e.get('type', ''), e['name'], e['url'])
+
+
+def _fetch_title(url):
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        ctx = ssl.create_default_context()
+        with urllib.request.urlopen(req, timeout=10, context=ctx) as r:
+            html = r.read(8000).decode('utf-8', errors='ignore')
+        m = re.search(r'<title[^>]*>(.*?)</title>', html, re.IGNORECASE | re.DOTALL)
+        return m.group(1).strip().lower() if m else ''
+    except Exception:
+        return None
+
+
+def test_url_relevance():
+    print("\n── 13. URL Relevance Check ─────────────────────────────────────")
+    data = load_json()
+    no_live = '--no-live-links' in sys.argv
+
+    # 13a — Domain sanity check (always runs, no network needed)
+    print("  13a. Accommodation domain check (stops & eating)")
+    entries = list(_collect_stop_urls(data))
+    domain_fails = []
+    for ctx, stype, name, url in entries:
+        domain = urlparse(url).netloc.lower().lstrip('www.')
+        if domain in ACCOM_DOMAINS and stype not in ACCOM_STOP_TYPES:
+            domain_fails.append((ctx, name, url))
+    test(
+        "No sightseeing/eating stops link to accommodation booking sites",
+        len(domain_fails) == 0,
+        f"{len(domain_fails)} issue(s)" if domain_fails else "",
+    )
+    for ctx, name, url in domain_fails:
+        print(f"    ✗ {ctx}: '{name}' → {url}")
+
+    # 13b — Page title relevance (only with live links)
+    if no_live:
+        print("  13b. Page title check — skipped (--no-live-links)")
+        return
+
+    print(f"  13b. Page title check — fetching titles for {len(entries)} URLs ...")
+    title_fails = []
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futures = {ex.submit(_fetch_title, url): (ctx, stype, name, url)
+                   for ctx, stype, name, url in entries}
+        for fut in as_completed(futures):
+            ctx, stype, name, url = futures[fut]
+            title = fut.result()
+            if title is None:
+                continue  # unreachable — already caught by test 11
+            if stype not in ACCOM_STOP_TYPES:
+                hits = [kw for kw in ACCOM_TITLE_KEYWORDS if kw in title]
+                if hits:
+                    title_fails.append((ctx, name, url, title[:60], hits))
+
+    test(
+        "No sightseeing/eating stop links to a page with accommodation content",
+        len(title_fails) == 0,
+        f"{len(title_fails)} issue(s)" if title_fails else "",
+    )
+    for ctx, name, url, title, hits in title_fails:
+        print(f"    ✗ {ctx}: '{name}'")
+        print(f"      URL:   {url}")
+        print(f"      Title: {title}")
+        print(f"      Flags: {', '.join(hits)}")
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # RUNNER
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -838,6 +937,7 @@ def run_all():
     test_safety_checks()
     test_google_maps_urls()
     test_live_links()
+    test_url_relevance()
 
     # Summary
     passed = sum(1 for r in RESULTS if r[0] == "PASS")
