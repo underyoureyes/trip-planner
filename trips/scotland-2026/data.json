@@ -463,12 +463,6 @@
           "book_ahead": true
         },
         {
-          "name": "SPAR — Drymen (9 miles from Balmaha)",
-          "type": "supplies",
-          "detail": "2–4 Stirling Road, Drymen G63 0BN. Pick up supplies on the way east. Mon–Sat 06:30–22:00, Sun 08:00–22:00.",
-          "maps_query": "SPAR Drymen 2-4 Stirling Road G63 0BN"
-        },
-        {
           "name": "Callander town centre",
           "type": "sightseeing_dogs",
           "detail": "Charming Trossachs gateway town on the River Teith. Good cafés and shops on the main street. Short riverside walk, dogs welcome. Rob Roy connections throughout the town. A great lunch stop.",
