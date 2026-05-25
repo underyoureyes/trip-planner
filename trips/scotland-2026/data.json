@@ -439,70 +439,79 @@
     {
       "day": 4,
       "date": "2026-05-26",
-      "title": "WHW Walk + Loch Lomond Cruise + Doune Castle",
+      "title": "Loch Lomond Cruise, Callander & Doune Castle",
       "stay_id": "rowardennan",
-      "leg_miles": 55,
-      "leg_drive_hours": 2.0,
-      "total_walk_miles": 3.0,
+      "leg_miles": 75,
+      "leg_drive_hours": 2.5,
+      "total_walk_miles": 1.5,
       "map_waypoints": [
         "Rowardennan Loch Lomond G63 0AR",
-        "Ross Wood Rowardennan Loch Lomond",
         "Balmaha Boatyard Balmaha G63 0JQ",
+        "Drymen G63 0BN",
+        "Callander FK17 8BQ",
         "Doune Castle Doune FK16 6EA",
         "Rowardennan Loch Lomond G63 0AR"
       ],
       "stops": [
         {
-          "name": "SPAR — Drymen (nearest shop, 11 miles)",
-          "type": "supplies",
-          "detail": "Nearest shop to Rowardennan. 2–4 Stirling Road, Drymen G63 0BN. Mon–Sat 06:30–22:00, Sun 08:00–22:00.",
-          "maps_query": "SPAR Drymen 2-4 Stirling Road G63 0BN"
-        },
-        {
-          "name": "WHW: Rowardennan to Ross Wood",
-          "type": "walk_dogs",
-          "detail": "Flat lochside path — 1.5 miles each way = 3 miles total. STOP at Ross Wood. Do NOT push to Sallochy.",
-          "cost": "Free",
-          "walk_miles": 3.0,
-          "maps_query": "Ross Wood Rowardennan Loch Lomond"
-        },
-        {
-          "name": "Doune Castle",
-          "type": "castle_dogs",
-          "detail": "Monty Python Holy Grail filming location. Dogs in grounds. Tag-team the interior.",
-          "cost": "~10pp",
-          "url": "https://www.historicenvironment.scot/visit-a-place/places/doune-castle/",
-          "maps_query": "Doune Castle Doune FK16 6EA"
-        },
-        {
-          "name": "Cruise Loch Lomond — Explorer Cruise from Balmaha",
+          "name": "Cruise Loch Lomond — Explorer Cruise, Balmaha",
           "type": "cruise_dogs",
-          "detail": "Balmaha Boatyard is 2 miles south of your lodge. Hop-on hop-off Explorer cruise visiting Luss, Inversnaid and island stops on Loch Lomond. Dogs welcome on deck. ~1.5–2 hrs. Book ahead — Explorer ticket runs Tue–Sun (not Bank Holidays). Aim for a morning departure to fit Doune Castle in the afternoon.",
+          "detail": "Balmaha Boatyard is just 2 miles south of your lodge — first stop of the day. Hop-on hop-off Explorer cruise visiting Luss, Inversnaid and island stops. Dogs welcome on deck. ~1.5–2 hrs. Book ahead: cruiselochlomond.co.uk or 01301 702 356.",
           "cost": "~£18pp",
           "url": "https://www.cruiselochlomond.co.uk",
           "maps_query": "Balmaha Boatyard Balmaha G63 0JQ",
           "book_ahead": true
+        },
+        {
+          "name": "SPAR — Drymen (9 miles from Balmaha)",
+          "type": "supplies",
+          "detail": "2–4 Stirling Road, Drymen G63 0BN. Pick up supplies on the way east. Mon–Sat 06:30–22:00, Sun 08:00–22:00.",
+          "maps_query": "SPAR Drymen 2-4 Stirling Road G63 0BN"
+        },
+        {
+          "name": "Callander town centre",
+          "type": "sightseeing_dogs",
+          "detail": "Charming Trossachs gateway town on the River Teith. Good cafés and shops on the main street. Short riverside walk, dogs welcome. Rob Roy connections throughout the town. A great lunch stop.",
+          "cost": "Free",
+          "maps_query": "Callander town centre FK17 8BQ",
+          "walk_miles": 0.5
+        },
+        {
+          "name": "⛽ Petrol — fill up here (150 miles in tank)",
+          "type": "fuel",
+          "detail": "Callander has a petrol station on the A84 (convenient). For cheapest fuel: Asda Stirling (Drip Road, FK7 7RR) is ~10 miles south of Doune Castle — typically 5–8p/litre cheaper than town forecourts. With 150 miles now and Day 5 being a 93-mile drive to Ballachulish, fill up today.",
+          "maps_query": "Asda Stirling Drip Road FK7 7RR"
+        },
+        {
+          "name": "Doune Castle",
+          "type": "castle_dogs",
+          "detail": "Monty Python Holy Grail filming location — 'I fart in your general direction.' Dogs in grounds, tag-team the interior. ~45 min from Callander via A84.",
+          "cost": "~£10pp",
+          "url": "https://www.historicenvironment.scot/visit-a-place/places/doune-castle/",
+          "maps_query": "Doune Castle Doune FK16 6EA",
+          "walk_miles": 0.5
         }
       ],
       "eating": [
         {
-          "name": "Real Food Cafe, Tyndrum",
+          "name": "Callander Meadows",
           "type": "lunch",
           "dog_friendly": true,
-          "url": "https://therealfoodcafe.com"
+          "detail": "Main Street, Callander FK17 8BB. Well-regarded bistro, local produce. Dog-friendly outside seating.",
+          "maps_query": "Callander Meadows Main Street Callander FK17"
         },
         {
-          "name": "Rowardennan Hotel",
+          "name": "Rowardennan Hotel — Clansman Bar",
           "type": "dinner",
           "dog_friendly": true,
           "url": "https://www.rowardennanhotel.co.uk"
         }
       ],
       "notes": [
-        "Morning: WHW walk from Rowardennan (3 miles) — then 2 miles to Balmaha for the cruise.",
-        "🚢 Book Cruise Loch Lomond Explorer ticket in advance — cruiselochlomond.co.uk or 01301 702 356. Runs Tue–Sun.",
-        "Afternoon: Doune Castle is ~30 miles south of Balmaha via Drymen (~45 min drive).",
-        "Check Doune Castle opening times before you go: historicenvironment.scot"
+        "🚢 Book Cruise Loch Lomond Explorer ticket first — cruiselochlomond.co.uk or 01301 702 356. Runs Tue–Sun.",
+        "⛽ 150 miles in tank — fill up in Callander (A84) or Asda Stirling (cheapest nearby, FK7 7RR, 10 min south of Doune Castle).",
+        "Day 5 is a 93-mile drive to Ballachulish — don't leave without refuelling today.",
+        "Check Doune Castle opening times: historicenvironment.scot"
       ],
       "weather_url": "https://www.bbc.co.uk/weather/2639050"
     },
