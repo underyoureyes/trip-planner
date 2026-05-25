@@ -11,11 +11,11 @@ export interface IntakeForm {
   accommodation_style: 'budget' | 'mid' | 'luxury' | 'mix'
   budget_per_day_gbp: number
   driving_max_hours: number
+  preferred_check_in?: string
+  preferred_check_out?: string
   must_include?: string
   notes?: string
 }
-
-// ── Trip Stop & Day ───────────────────────────────────────────────────────────
 
 export type StopType =
   | 'drive' | 'hotel' | 'sightseeing' | 'activity' | 'viewpoint'
@@ -33,10 +33,9 @@ export interface Stop {
   booking_ref?: string
   notes?: string
   duration_mins?: number
-  // Drive stops
+  suggested?: boolean
   drive_time_mins?: number
   distance_km?: number
-  // Hotel stops
   check_in?: string
   check_out?: string
 }
@@ -48,6 +47,7 @@ export interface Eating {
   address?: string
   website?: string
   booking_required?: boolean
+  suggested?: boolean
 }
 
 export interface Day {
@@ -68,8 +68,6 @@ export interface TripData {
   days: Day[]
 }
 
-// ── Trip Record (DB) ──────────────────────────────────────────────────────────
-
 export type TripStatus = 'draft' | 'generating' | 'ready' | 'error'
 
 export interface Trip {
@@ -83,8 +81,6 @@ export interface Trip {
   intake_form?: IntakeForm
   created_at: string
 }
-
-// ── User ──────────────────────────────────────────────────────────────────────
 
 export interface User {
   id: string
