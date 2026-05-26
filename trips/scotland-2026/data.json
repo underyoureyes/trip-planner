@@ -446,8 +446,6 @@
       "total_walk_miles": 1.7,
       "map_waypoints": [
         "Rowardennan Loch Lomond G63 0AR",
-        "Balmaha Boatyard Balmaha G63 0JQ",
-        "Drymen G63 0BN",
         "Callander FK17 8BQ",
         "Trossachs Woollen Mill Kilmahog FK17 8HD",
         "Doune Castle Doune FK16 6EA",
@@ -455,12 +453,12 @@
       ],
       "stops": [
         {
-          "name": "Cruise Loch Lomond — Explorer Cruise, Balmaha",
+          "name": "Cruise Loch Lomond — Explorer Cruise, Rowardennan Pier",
           "type": "cruise_dogs",
-          "detail": "Balmaha Boatyard is just 2 miles south of your lodge — first stop of the day. Hop-on hop-off Explorer cruise visiting Luss, Inversnaid and island stops. Dogs welcome on deck. ~1.5–2 hrs. Book ahead: cruiselochlomond.co.uk or 01301 702 356.",
+          "detail": "Rowardennan Pier is 2 mins from your lodge — walk down to board. Hop-on hop-off Explorer cruise visiting Luss, Inversnaid and island stops. Dogs welcome on deck. ~1.5–2 hrs. Book ahead: cruiselochlomond.co.uk or 01301 702 356.",
           "cost": "~£18pp",
           "url": "https://www.cruiselochlomond.co.uk",
-          "maps_query": "Balmaha Boatyard Balmaha G63 0JQ",
+          "maps_query": "Rowardennan Pier Loch Lomond G63 0AR",
           "book_ahead": true
         },
         {
