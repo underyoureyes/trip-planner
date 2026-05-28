@@ -607,7 +607,7 @@
     {
       "day": 6,
       "date": "2026-05-28",
-      "title": "Nevis Range Gondola + Jacobite / ScotRail to Mallaig",
+      "title": "ScotRail & Jacobite to Mallaig",
       "stay_id": "ballachulish",
       "leg_miles": 45,
       "leg_drive_hours": 1.5,
@@ -618,11 +618,10 @@
       "total_walk_miles": 2.0,
       "map_waypoints": [
         "Ballachulish PH49 4JY",
-        "Nevis Range Torlundy Fort William PH33 6SW",
-        "Glenfinnan Viaduct Viewpoint PH37 4LT",
-        "Fort William Railway Station Fort William PH33 6TQ",
-        "Mallaig Harbour PH41",
-        "Fort William PH33",
+        "Morrisons Fort William PH33 6AR",
+        "Glenfinnan Viaduct PH37 4LT",
+        "Fort William Station PH33 6EN",
+        "Mallaig PH41 4PH",
         "Ballachulish PH49 4JY"
       ],
       "stops": [
@@ -631,16 +630,6 @@
           "type": "supplies",
           "detail": "Largest supermarket in the area. An Aird Road, Fort William PH33 6AN. Mon–Sat 07:00–22:00, Sun 08:00–20:00. Petrol station attached. Bakery, butcher, fishmonger.",
           "maps_query": "Morrisons Fort William An Aird Road PH33 6AN"
-        },
-        {
-          "name": "Nevis Range Gondola",
-          "type": "gondola_dogs",
-          "detail": "UK's only mountain gondola — 650m up. Dogs ride free, on lead. Snowgoose Cafe at top. Check mountain report night before.",
-          "cost": "~20pp, dogs free",
-          "url": "https://www.nevisrange.co.uk/activities/mountain-gondola/",
-          "maps_query": "Nevis Range Torlundy Fort William PH33 6SW",
-          "book_ahead": true,
-          "weather_dependent": true
         },
         {
           "name": "Glenfinnan Viaduct Viewpoint",
@@ -676,13 +665,6 @@
           "detail": "Arrive ~14:10. ~1h55 before return train. Walk the harbour, fish & chips at Jaffy's or Cornerstone. Plenty of time.",
           "walk_miles": 1.0,
           "maps_query": "Mallaig Harbour PH41"
-        },
-        {
-          "name": "Nevis Cycles / Off Beat Bikes, Fort William — road & e-bike hire (optional)",
-          "type": "ebike_optional",
-          "detail": "In Fort William for the train today. Nevis Cycles (road bikes, e-bikes, Lochy Retail Park) and Off Beat Bikes (mountain & e-bikes, High Street) both in town. Good option for a morning ride before the train or after returning from Mallaig.",
-          "url": "https://www.google.com/maps/search/Nevis+Cycles+Fort+William+PH33/@56.82,-5.11,13z",
-          "maps_query": "Nevis Cycles Fort William PH33"
         }
       ],
       "eating": [
@@ -714,20 +696,18 @@
         }
       ],
       "notes": [
-        "Leave Ballachulish by 08:00 for Nevis Range at 08:30",
-        "Fuel: Tesco Fort William is the last cheap supermarket petrol before Skye — fill up here today while in town for the train. Kyle of Lochalsh garage (tomorrow) is expensive.",
-        "Check gondola mountain report the night before: nevisrange.co.uk/mountain-report",
-        "Jacobite: register at westcoastrailways.co.uk for email alerts — book immediately if it opens",
-        "ScotRail timings: 12:18 dep Fort William → ~14:10 Mallaig → 16:05 return → ~18:00 Fort William. Book off-peak return online (scotrail.co.uk) or at station — off-peak after 09:15 weekdays, 12:18 qualifies. Dogs free.",
-        "Glenfinnan Viaduct viewpoint: after gondola, drive A830 west (~20 min). 35 min stop — walk to viewpoint, see the monument. Leave by 11:30 to reach Fort William station in time.",
-        "Do NOT get off the train at intermediate stops — service is infrequent, you risk being stranded for 3+ hours"
+        "⛽ Fill up at Morrisons/Tesco Fort William — last cheap fuel before Kyle tomorrow.",
+        "ScotRail: 12:18 dep Fort William → ~14:10 Mallaig → 16:05 return → ~18:00 Fort William. Book at scotrail.co.uk or station. Dogs free.",
+        "Glenfinnan Viaduct viewpoint: drive A830 west (~20 min from Fort William). Allow 30–40 min — walk to viewpoint, see the monument. Leave by 11:30 to reach station in time.",
+        "Jacobite: register at westcoatrailways.co.uk for email alerts — book immediately if it opens.",
+        "Do NOT get off the train at intermediate stops — service is infrequent, risk being stranded 3+ hrs."
       ],
       "weather_url": "https://www.bbc.co.uk/weather/2649169"
     },
     {
       "day": 7,
       "date": "2026-05-29",
-      "title": "Ballachulish → Glendale, Isle of Skye",
+      "title": "Nevis Range Gondola + Drive to Skye",
       "stay_id": "skye",
       "leg_miles": 142,
       "leg_drive_hours": 3.0,
@@ -737,14 +717,21 @@
       "total_walk_miles": 1.5,
       "map_waypoints": [
         "Ballachulish PH49 4JY",
-        "Eilean Donan Castle Dornie IV40 8DX",
-        "Kyle of Lochalsh IV40 8AA",
-        "Skye Bridge Kyle of Lochalsh",
-        "Portree Isle of Skye IV51",
-        "Dunvegan Castle Isle of Skye IV55",
+        "Nevis Range Gondola Fort William PH33 6SW",
+        "Eilean Donan Castle IV40 8DX",
+        "Kyle of Lochalsh IV40 8AQ",
         "Glendale Isle of Skye IV55 8WS"
       ],
       "stops": [
+        {
+          "name": "Nevis Range Gondola — Ben Nevis",
+          "type": "gondola_dogs",
+          "detail": "First stop of the day — 20 min drive from Ballachulish. Gondola rises to 650m with stunning Ben Nevis views. Dogs welcome in the gondola. No rush to get to Skye — enjoy the morning here.",
+          "cost": "~£20pp",
+          "url": "https://www.nevisrange.co.uk/activities/mountain-gondola/",
+          "maps_query": "Nevis Range Gondola Fort William PH33 6SW",
+          "book_ahead": false
+        },
         {
           "name": "Co-op Food — Kyle of Lochalsh (stock up before Glendale)",
           "type": "supplies",
@@ -801,24 +788,25 @@
         }
       ],
       "notes": [
-        "FILL UP at Kyle — Glendale has NO fuel for 20+ miles. Kyle garage is expensive but unavoidable. Ideally filled cheaply at Tesco Fort William yesterday (Day 6).",
-        "Glendale road (B884) is relentlessly single-track — slow down",
-        "Sheep everywhere from here — Koda and Monty on leads near livestock",
-        "Plug in BMW at Glendale Airbnb — confirm socket with host"
+        "Gondola first — check mountain report the night before: nevisrange.co.uk/mountain-report. No need to rush.",
+        "FILL UP at Kyle of Lochalsh — Glendale has NO fuel for 20+ miles. Kyle garage is expensive but unavoidable.",
+        "Glendale road (B884) is relentlessly single-track — slow down.",
+        "Sheep everywhere from here — Koda and Monty on leads near livestock.",
+        "Plug in BMW at Glendale Airbnb — confirm socket with host."
       ],
       "weather_url": "https://www.bbc.co.uk/weather/2642481"
     },
     {
       "day": 8,
       "date": "2026-05-30",
-      "title": "Skye — Trotternish Loop",
+      "title": "Skye — Trotternish Photo Tour",
       "stay_id": "skye",
       "leg_miles": 75,
       "leg_drive_hours": 3.5,
       "flags": [
         "ebike"
       ],
-      "total_walk_miles": 2.2,
+      "total_walk_miles": 0.5,
       "map_waypoints": [
         "Glendale Isle of Skye IV55 8WS",
         "Old Man of Storr Car Park Isle of Skye",
@@ -835,42 +823,33 @@
           "maps_query": "Co-op Food Woodpark Road Portree IV51 9HQ"
         },
         {
-          "name": "Old Man of Storr — LOWER PATH ONLY",
-          "type": "walk_dogs",
-          "detail": "Lower car park fills by 09:30. Walk to first viewpoint and back ~1 mile only. SKIP steep upper section.",
+          "name": "Old Man of Storr — roadside viewpoint",
+          "type": "photo_stop",
+          "detail": "Pull in at the car park for the iconic view. Photo stop only — no walking required. Best light in the morning.",
           "cost": "Parking 3",
-          "walk_miles": 1.0,
           "maps_query": "Old Man of Storr Car Park Isle of Skye",
           "koda_note": "Lower path only"
         },
         {
           "name": "Kilt Rock & Mealt Falls",
           "type": "viewpoint",
-          "detail": "5-min roadside stop. Waterfall into sea. Almost no walking.",
+          "detail": "Roadside pull-in — sheer basalt cliffs and 55m waterfall. Classic Skye photo stop.",
           "walk_miles": 0.1,
           "maps_query": "Kilt Rock viewpoint Isle of Skye"
         },
         {
           "name": "Quiraing — first viewpoint only",
           "type": "walk_dogs",
-          "detail": "Car park to first viewpoint and back ~0.6 miles. Skip the full 4.5-mile circuit.",
+          "detail": "Pull in at the car park viewpoint — dramatic ridgeline for photos. Short step to the main viewpoint only.",
           "cost": "Parking ~3",
-          "walk_miles": 0.6,
           "maps_query": "Quiraing car park Skye"
         },
         {
           "name": "Faerie Glen, Uig",
           "type": "walk_dogs",
-          "detail": "20 min wander, mostly flat. Donation parking.",
-          "walk_miles": 0.5,
+          "detail": "Tiny hobbit-like valley — short flat walk from the roadside (5 mins). Gentle enough for a photo stop.",
+          "walk_miles": 0.2,
           "maps_query": "Fairy Glen Uig Isle of Skye"
-        },
-        {
-          "name": "Island Cycles, Portree — road & e-bike hire (optional)",
-          "type": "ebike_optional",
-          "detail": "In Portree on the Trotternish loop. Road bikes and e-bikes. The Trotternish ridge road (Portree–Staffin–Uig loop, ~40 miles) is Skye's classic road ride. Hire for a few hours while in town for lunch.",
-          "url": "https://www.islandcycles-skye.co.uk",
-          "maps_query": "Island Cycles Portree Isle of Skye IV51"
         }
       ],
       "eating": [
@@ -888,10 +867,9 @@
         }
       ],
       "notes": [
-        "Leave Glendale by 08:30 — Storr car park fills by 09:30, 1hr 50min away",
-        "Total walking today: ~2.2 miles — comfortable for Koda",
-        "Quiraing single-track road is tight on blind bends",
-        "Cloud in? Swap Storr for Brother's Point — nicer in murk and shorter"
+        "Photo stops only today — no big walks. Pull in, enjoy the views, move on at your own pace.",
+        "Storr car park fills up but no pressure — photo from the car park is still spectacular.",
+        "Quiraing single-track road is tight on blind bends — take it steady."
       ],
       "weather_url": "https://www.bbc.co.uk/weather/2640006"
     },
