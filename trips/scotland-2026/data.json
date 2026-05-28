@@ -640,19 +640,9 @@
           "maps_query": "Glenfinnan Viaduct Viewpoint PH37 4LT"
         },
         {
-          "name": "Jacobite Steam Train (Option A — if running)",
+          "name": "ScotRail — Fort William to Mallaig",
           "type": "train_dogs",
-          "detail": "NOT currently bookable — ORR dispute. Sign up for alerts. If open: 2 separate bookings (Koda on one, Monty on other). 10:15 dep, Mallaig 12:25, return 14:10.",
-          "cost": "~75-95pp x2",
-          "url": "https://westcoastrailways.co.uk/jacobite/steam-train-trip",
-          "status": "not_bookable",
-          "dogs_per_booking": 1,
-          "bookings_needed": 2
-        },
-        {
-          "name": "ScotRail Fort William to Mallaig (Option B — likely option)",
-          "type": "train_dogs",
-          "detail": "Same route, same Glenfinnan Viaduct crossing — diesel not steam. 12:18 dep Fort William, arrive Mallaig ~14:10. Return 16:05 from Mallaig, back Fort William ~18:00. ~1h55 in Mallaig — enough for lunch and harbour walk. Trains are infrequent so do not get off at intermediate stops. Look out both sides ~35 min in for the viaduct — right side sees the arch curve, left side looks down to Loch Shiel.",
+          "detail": "12:18 dep Fort William, arrive Mallaig ~14:10. Return 16:05, back Fort William ~18:00. ~1h55 in Mallaig — lunch and harbour walk. Look both sides ~35 min in for the Glenfinnan Viaduct — right side sees the arch curve, left looks down to Loch Shiel. Dogs free.",
           "cost": "Off-peak return ~£13-15pp, dogs free",
           "url": "https://www.scotrail.co.uk",
           "status": "available",
