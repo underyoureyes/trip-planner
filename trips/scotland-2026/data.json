@@ -704,10 +704,11 @@
       "flags": [
         "fuel_warning"
       ],
-      "total_walk_miles": 1.5,
+      "total_walk_miles": 4.0,
       "map_waypoints": [
         "Ballachulish PH49 4JY",
         "Nevis Range Gondola Fort William PH33 6SW",
+        "Steall Falls Car Park Glen Nevis PH33 6SX",
         "Eilean Donan Castle IV40 8DX",
         "Kyle of Lochalsh IV40 8AQ",
         "Glendale Isle of Skye IV55 8WS"
@@ -721,6 +722,14 @@
           "url": "https://www.nevisrange.co.uk/activities/mountain-gondola/",
           "maps_query": "Nevis Range Gondola Fort William PH33 6SW",
           "book_ahead": false
+        },
+        {
+          "name": "Steall Falls, Glen Nevis",
+          "type": "walk_dogs",
+          "detail": "Scotland's second highest waterfall — 120m cascade in a dramatic gorge. 5 min drive from Nevis Range: follow the B8004 into Glen Nevis, park at Nevis Gorge car park (end of the glen road). 2.5 mile round trip on a well-graded gorge path. Dogs off lead on open ground. Allow 1.5 hrs.",
+          "cost": "Free (parking ~£3)",
+          "walk_miles": 2.5,
+          "maps_query": "Steall Falls Car Park Glen Nevis Fort William PH33 6SX"
         },
         {
           "name": "Co-op Food — Kyle of Lochalsh (stock up before Glendale)",
@@ -874,7 +883,7 @@
         "highlight",
         "golf"
       ],
-      "total_walk_miles": 2.0,
+      "total_walk_miles": 4.0,
       "golf": {
         "course": "Isle of Skye Golf Club, Sconser",
         "holes": 9,
@@ -890,6 +899,7 @@
         "Portree Harbour Isle of Skye IV51",
         "Isle of Skye Golf Club Sconser IV48",
         "Sligachan Hotel Isle of Skye IV47",
+        "Fairy Pools Glenbrittle Isle of Skye IV47 8TA",
         "Talisker Distillery Carbost IV47 8SR",
         "Glendale Isle of Skye IV55 8WS"
       ],
@@ -922,6 +932,14 @@
           "detail": "Iconic mountaineers' hotel. Dog-friendly bar, great ales.",
           "url": "https://hebrideanhotels.co.uk/sligachan/",
           "maps_query": "Sligachan Hotel Isle of Skye IV47"
+        },
+        {
+          "name": "Fairy Pools, Glenbrittle",
+          "type": "walk_dogs",
+          "detail": "Iconic Skye waterfall walk — turquoise pools fed by cascading falls from the Black Cuillin. Flat path from the car park on the Glenbrittle road (B8009 off A863 near Carbost). 2 miles out and back to the main pools — dogs will love it. On the road to Talisker, natural stop between Sligachan and Carbost. Allow 1.5 hrs.",
+          "cost": "Parking ~£5",
+          "walk_miles": 2.0,
+          "maps_query": "Fairy Pools Glenbrittle Isle of Skye IV47 8TA"
         },
         {
           "name": "Talisker Distillery, Carbost",
