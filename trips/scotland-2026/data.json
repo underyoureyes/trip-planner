@@ -697,17 +697,17 @@
     {
       "day": 7,
       "date": "2026-05-29",
-      "title": "Nevis Range Gondola + Drive to Skye",
+      "title": "Steall Falls & Drive to Skye",
       "stay_id": "skye",
       "leg_miles": 142,
       "leg_drive_hours": 3.0,
       "flags": [
         "fuel_warning"
       ],
-      "total_walk_miles": 4.0,
+      "total_walk_miles": 3.0,
       "map_waypoints": [
         "Ballachulish PH49 4JY",
-        "Nevis Range Gondola Fort William PH33 6SW",
+        "Morrisons Fort William An Aird Road PH33 6AN",
         "Steall Falls Car Park Glen Nevis PH33 6SX",
         "Eilean Donan Castle IV40 8DX",
         "Kyle of Lochalsh IV40 8AQ",
@@ -715,41 +715,38 @@
       ],
       "stops": [
         {
-          "name": "Nevis Range Gondola — Ben Nevis",
-          "type": "gondola_dogs",
-          "detail": "First stop of the day — 20 min drive from Ballachulish. Gondola rises to 650m with stunning Ben Nevis views. Dogs welcome in the gondola. No rush to get to Skye — enjoy the morning here.",
-          "cost": "~£20pp",
-          "url": "https://www.nevisrange.co.uk/activities/mountain-gondola/",
-          "maps_query": "Nevis Range Gondola Fort William PH33 6SW",
-          "book_ahead": false
+          "name": "Morrisons — Fort William (fuel first)",
+          "type": "fuel",
+          "detail": "Aim 10:50. Fill up here — last cheap fuel before Kyle. An Aird Road, Fort William PH33 6AN. Petrol station attached. Grab snacks if needed. Allow 15 min.",
+          "maps_query": "Morrisons Fort William An Aird Road PH33 6AN"
         },
         {
           "name": "Steall Falls, Glen Nevis",
           "type": "walk_dogs",
-          "detail": "Scotland's second highest waterfall — 120m cascade in a dramatic gorge. 5 min drive from Nevis Range: follow the B8004 into Glen Nevis, park at Nevis Gorge car park (end of the glen road). 2.5 mile round trip on a well-graded gorge path. Dogs off lead on open ground. Allow 1.5 hrs.",
+          "detail": "Aim 11:15. Scotland's second highest waterfall — 120m cascade in a dramatic gorge. 5 min drive from Morrisons on the B8004 into Glen Nevis, park at Nevis Gorge car park (end of the glen road). 2.5 mile round trip on a well-graded gorge path. Dogs off lead on open ground. Back by 12:45. Cloud makes no difference — the gorge is spectacular regardless.",
           "cost": "Free (parking ~£3)",
           "walk_miles": 2.5,
           "maps_query": "Steall Falls Car Park Glen Nevis Fort William PH33 6SX"
         },
         {
-          "name": "Co-op Food — Kyle of Lochalsh (stock up before Glendale)",
-          "type": "supplies",
-          "detail": "Critical stop — stock up here before heading to Glendale (very remote, nearest shop 28+ miles). 1 Bridge Road, Kyle of Lochalsh IV40 8BH. Open every day 07:00–22:00. Right by the Skye Bridge.",
-          "maps_query": "Co-op Food 1 Bridge Road Kyle of Lochalsh IV40 8BH"
-        },
-        {
           "name": "Eilean Donan Castle",
           "type": "castle_dogs",
-          "detail": "Most photographed castle in Scotland. Dogs in grounds. Tag-team the interior.",
-          "cost": "Grounds free; inside ~12pp",
+          "detail": "Aim 13:55. Most photographed castle in Scotland. Lunch at the castle café, then tag-team the interior (~35 min inside). Dogs in grounds. Allow 1 hour — leave by 15:00.",
+          "cost": "Grounds free; inside ~£12pp",
           "url": "https://www.eileandonancastle.com",
           "maps_query": "Eilean Donan Castle Dornie IV40 8DX"
         },
         {
           "name": "Kyle of Lochalsh — FUEL",
           "type": "fuel",
-          "detail": "FILL UP HERE. Last reliable fuel before Glendale — 20+ miles with nothing.",
+          "detail": "Aim 15:15. FILL UP HERE — last fuel before Glendale (20+ miles with nothing on Skye). Kyle garage is expensive but unavoidable.",
           "maps_query": "petrol station Kyle of Lochalsh IV40"
+        },
+        {
+          "name": "Co-op Food — Kyle of Lochalsh (stock up before Glendale)",
+          "type": "supplies",
+          "detail": "Right by the Skye Bridge. Critical stop — Glendale is very remote, nearest shop 28+ miles. 1 Bridge Road, Kyle of Lochalsh IV40 8BH. Open every day 07:00–22:00.",
+          "maps_query": "Co-op Food 1 Bridge Road Kyle of Lochalsh IV40 8BH"
         },
         {
           "name": "Skye Bridge",
@@ -760,8 +757,8 @@
         {
           "name": "Dunvegan Castle (optional)",
           "type": "castle_dogs_optional",
-          "detail": "On route to Glendale. Dogs in grounds and walled garden.",
-          "cost": "~17pp",
+          "detail": "On route to Glendale — only stop if time allows. Dogs in grounds and walled garden. Aim to be at Glendale by 17:00.",
+          "cost": "~£17pp",
           "url": "https://www.dunvegancastle.com",
           "maps_query": "Dunvegan Castle Isle of Skye IV55"
         }
@@ -771,24 +768,22 @@
           "name": "Eilean Donan cafe",
           "type": "lunch",
           "dog_friendly": true,
+          "detail": "Arrive ~13:55 — lunch at the castle café, then grounds and interior. 1 hour.",
           "url": "https://www.eileandonancastle.com"
         },
         {
           "name": "Cluanie Inn",
           "type": "lunch_alternative",
           "dog_friendly": true,
+          "detail": "On the A87 en route to Eilean Donan — good alternative if you want lunch before the castle.",
           "url": "https://cluanieinn.com"
-        },
-        {
-          "name": "Broadford Co-op (supplies)",
-          "type": "supplies",
-          "detail": "Stock up for 3 nights in Glendale.",
-          "maps_query": "Co-op Broadford Isle of Skye IV49"
         }
       ],
       "notes": [
-        "Gondola first — check mountain report the night before: nevisrange.co.uk/mountain-report. No need to rush.",
-        "FILL UP at Kyle of Lochalsh — Glendale has NO fuel for 20+ miles. Kyle garage is expensive but unavoidable.",
+        "🕙 10:30 Ballachulish → 10:50 Morrisons fuel → 11:15 Steall Falls (back 12:45) → 13:55 Eilean Donan lunch + castle → 15:15 Kyle fuel + Co-op → 15:40 Skye Bridge → 17:00 Glendale ✓",
+        "⛽ Two fuel stops today: Morrisons Fort William (first thing, cheap) + Kyle of Lochalsh (expensive but mandatory — nothing on Skye for 20+ miles).",
+        "Steall Falls is perfect in cloud — deep gorge, the waterfall doesn't need sunshine. Spectacular regardless.",
+        "Check-in Glendale 17:00 — no rush. If early, Neist Point Lighthouse is 3 miles from the property for a short walk.",
         "Glendale road (B884) is relentlessly single-track — slow down.",
         "Sheep everywhere from here — Koda and Monty on leads near livestock.",
         "Plug in BMW at Glendale Airbnb — confirm socket with host."
