@@ -991,13 +991,13 @@
       "flags": [
         "golf"
       ],
-      "total_walk_miles": 2.0,
+      "total_walk_miles": 1.0,
       "map_waypoints": [
         "Glendale Isle of Skye IV55 8WS",
         "Isle of Skye Golf Club Sconser IV48",
         "Broadford Isle of Skye IV49",
         "Kyle of Lochalsh IV40 8AA",
-        "Plodda Falls Tomich Cannich IV4 7LX",
+        "Inverness IV2 3PP",
         "Foyers Loch Ness IV2 6XU"
       ],
       "stops": [
@@ -1009,24 +1009,16 @@
           "maps_query": "Isle of Skye Golf Club Sconser IV48"
         },
         {
-          "name": "Co-op Food — Broadford (stock up before Loch Ness)",
-          "type": "supplies",
-          "detail": "Main Street, Broadford IV49 9AE. Open every day 07:00–22:00. Stock up here before Loch Ness — the cottage at Brackla (IV2) is remote with no nearby shops.",
-          "maps_query": "Co-op Food Main Street Broadford IV49 9AE"
-        },
-        {
           "name": "Broadford Co-op — FUEL",
           "type": "fuel",
           "detail": "Co-op Broadford is cheaper than Kyle garage — fill up here. Already stopping for supplies. Kyle garage is a fallback if missed.",
           "maps_query": "Co-op Broadford Isle of Skye IV49"
         },
         {
-          "name": "Plodda Falls, Glen Affric",
-          "type": "walk_dogs",
-          "detail": "Tomich turn-off on A831. 30-min walk to a 150ft waterfall. Spectacular and quiet.",
-          "cost": "Free parking",
-          "walk_miles": 1.0,
-          "maps_query": "Plodda Falls Tomich Cannich IV4 7LX"
+          "name": "M&S Food — Inverness (Eastgate Centre)",
+          "type": "supplies",
+          "detail": "Eastgate Shopping Centre, Inverness IV2 3PP. Full M&S Food hall — stock up here for the Loch Ness cottage (remote, no nearby shops). Mon–Sat 08:00–20:00, Sun 10:00–18:00. On route via A82 north into Inverness.",
+          "maps_query": "Marks and Spencer Food Eastgate Centre Inverness IV2 3PP"
         },
         {
           "name": "Invermoriston Telford Bridge",
@@ -1050,11 +1042,11 @@
         }
       ],
       "notes": [
-        "🕙 Checkout Glendale 10:00 → Sconser golf 10:40 (done ~12:30) → Broadford fuel + supplies → Kyle → Plodda Falls → Foyers ✓",
-        "Golf: call 01478 650465. Dog policy unconfirmed — if no dogs, Lesley walks along Sconser shoreline.",
-        "Falls of Foyers is 5 min from Brackla cottage — save for tomorrow morning if arriving late.",
-        "Fuel: Broadford Co-op is cheaper than Kyle garage — fill up there.",
-        "Plug in BMW overnight at Brackla"
+        "🕙 Checkout Glendale 10:00 → Sconser golf 10:40 (done ~12:30) → Broadford fuel → Kyle → A82 north → Inverness M&S → B862 south shore → Foyers ✓",
+        "Route change: via Inverness (north shore) rather than west approach — similar distance, M&S on the way.",
+        "Golf: call 01478 650465. If no dogs allowed, Lesley walks Sconser shoreline while David plays.",
+        "Falls of Foyers is 5 min from Brackla cottage — save for tomorrow morning.",
+        "Plug in BMW overnight at Brackla."
       ],
       "weather_url": "https://www.bbc.co.uk/weather/2646088",
       "golf": {
