@@ -864,29 +864,18 @@
     {
       "day": 9,
       "date": "2026-05-31",
-      "title": "Stardust Boat + Sconser Golf + Talisker",
+      "title": "Neist Point + Stardust Boat + Talisker",
       "stay_id": "skye",
       "leg_miles": 60,
       "leg_drive_hours": 2.0,
       "flags": [
-        "highlight",
-        "golf"
+        "highlight"
       ],
       "total_walk_miles": 4.0,
-      "golf": {
-        "course": "Isle of Skye Golf Club, Sconser",
-        "holes": 9,
-        "cost_gbp": 25,
-        "hire_included": true,
-        "booking": "Call 01478 650465",
-        "url": "https://www.isleofskyegolfclub.co.uk",
-        "dogs_welcome": false,
-        "dogs_note": "Dog policy unconfirmed — call 01478 650465 or email iofsgc@gmail.com before trip"
-      },
       "map_waypoints": [
         "Glendale Isle of Skye IV55 8WS",
+        "Neist Point Lighthouse Isle of Skye IV55 8WR",
         "Portree Harbour Isle of Skye IV51",
-        "Isle of Skye Golf Club Sconser IV48",
         "Sligachan Hotel Isle of Skye IV47",
         "Fairy Pools Glenbrittle Isle of Skye IV47 8TA",
         "Talisker Distillery Carbost IV47 8SR",
@@ -894,38 +883,39 @@
       ],
       "stops": [
         {
+          "name": "Neist Point Lighthouse",
+          "type": "walk_dogs",
+          "detail": "Aim 09:00 — leave Glendale 08:45 (3 miles). Skye's most dramatic headland: sheer basalt cliffs dropping to the Minch, lighthouse at the tip. 2 mile round trip on a clear path, mostly flat. Dogs off lead on open ground. Back by 10:30, leave for Portree by 10:45.",
+          "cost": "Free",
+          "walk_miles": 2.0,
+          "maps_query": "Neist Point Lighthouse Isle of Skye IV55 8WR"
+        },
+        {
           "name": "Co-op Food — Portree (passing through)",
           "type": "supplies",
-          "detail": "Co-op on Woodpark Road (IV51 9HQ) or Bank Street town centre (IV51 9DA). Open every day 07:00–22:00. Only chain supermarket on Skye.",
-          "maps_query": "Co-op Food Bank Street Portree IV51 9DA"
+          "detail": "Aim 11:30. Quick stop en route to the harbour — Woodpark Road (IV51 9HQ) or Bank Street (IV51 9DA). Open every day 07:00–22:00.",
+          "maps_query": "Co-op Food Woodpark Road Portree IV51 9HQ"
         },
         {
           "name": "Stardust Boat Trips, Portree",
           "type": "cruise_dogs",
-          "detail": "Wildlife cruise — seals, sea eagles, dolphins. Dogs welcome. 2 hrs. Book ahead.",
-          "cost": "~25pp",
+          "detail": "12:00 departure from Portree Harbour. Wildlife cruise — seals, sea eagles, dolphins. Dogs welcome. ~2 hrs, back ~14:00. Book ahead.",
+          "cost": "~£25pp",
           "url": "https://www.skyeboat-trips.co.uk",
           "maps_query": "Portree Harbour Isle of Skye",
           "book_ahead": true
         },
         {
-          "name": "Isle of Skye Golf Club, Sconser",
-          "type": "golf",
-          "detail": "9 holes with Cuillins AND Red Hills views. Call 01478 650465.",
-          "url": "https://www.isleofskyegolfclub.co.uk",
-          "maps_query": "Isle of Skye Golf Club Sconser IV48"
-        },
-        {
           "name": "Sligachan Hotel",
           "type": "pub_dogs",
-          "detail": "Iconic mountaineers' hotel. Dog-friendly bar, great ales.",
+          "detail": "Aim 14:30. Iconic mountaineers' hotel. Dog-friendly bar, great ales. Natural stop between Portree and Talisker.",
           "url": "https://hebrideanhotels.co.uk/sligachan/",
           "maps_query": "Sligachan Hotel Isle of Skye IV47"
         },
         {
           "name": "Fairy Pools, Glenbrittle",
           "type": "walk_dogs",
-          "detail": "Iconic Skye waterfall walk — turquoise pools fed by cascading falls from the Black Cuillin. Flat path from the car park on the Glenbrittle road (B8009 off A863 near Carbost). 2 miles out and back to the main pools — dogs will love it. On the road to Talisker, natural stop between Sligachan and Carbost. Allow 1.5 hrs.",
+          "detail": "Aim 15:30. Iconic Skye waterfall walk — crystal-clear turquoise pools fed by cascading falls from the Black Cuillin. Flat path from the car park on the Glenbrittle road (B8009 off A863 near Carbost). 2 miles out and back to the main pools. Allow 1.5 hrs.",
           "cost": "Parking ~£5",
           "walk_miles": 2.0,
           "maps_query": "Fairy Pools Glenbrittle Isle of Skye IV47 8TA"
@@ -933,8 +923,8 @@
         {
           "name": "Talisker Distillery, Carbost",
           "type": "distillery",
-          "detail": "THE distillery on this trip. Tag-team — one tours, other walks dogs along Carbost Bay. Book ahead.",
-          "cost": "~25pp",
+          "detail": "Aim 17:00. THE distillery on this trip. Tag-team — one tours, other walks dogs along Carbost Bay. Book ahead.",
+          "cost": "~£25pp",
           "url": "https://www.malts.com/en-gb/distilleries/talisker",
           "maps_query": "Talisker Distillery Carbost IV47 8SR",
           "book_ahead": true,
@@ -943,7 +933,7 @@
         {
           "name": "Island Cycles, Portree — road & e-bike hire (optional)",
           "type": "ebike_optional",
-          "detail": "In Portree for the Stardust boat this morning. Road bikes and e-bikes. Use waiting time before or after the cruise. Portree to Sligachan on the A87 is a quiet scenic road ride (10 miles one way). Tag-team if needed.",
+          "detail": "In Portree for the Stardust boat — road bikes and e-bikes available if time before or after the cruise.",
           "url": "https://www.islandcycles-skye.co.uk",
           "maps_query": "Island Cycles Portree Isle of Skye IV51"
         }
@@ -985,9 +975,9 @@
         }
       ],
       "notes": [
-        "CALL AHEAD: Sconser golf — confirm dog policy (01478 650465 / iofsgc@gmail.com). If dogs not permitted, Lesley walks dogs along Sconser shoreline or Sligachan while David plays.",
-        "BOOK AHEAD: Stardust boat, Talisker tour, Three Chimneys — all sell out in season",
-        "Sconser golf: call 01478 650465, club hire available"
+        "🕙 08:45 leave Glendale → 09:00 Neist Point (back 10:30) → 10:45 drive to Portree → 11:30 Co-op → 12:00 boat (back ~14:00) → 14:30 Sligachan → 15:30 Fairy Pools → 17:00 Talisker ✓",
+        "BOOK AHEAD: Stardust boat, Talisker tour — both sell out in season",
+        "Neist Point: park at the end of the B884 — short walk from the car park to the cliffs."
       ],
       "weather_url": "https://www.bbc.co.uk/weather/2638373"
     },
@@ -998,16 +988,26 @@
       "stay_id": "lochness",
       "leg_miles": 180,
       "leg_drive_hours": 4.0,
-      "flags": [],
+      "flags": [
+        "golf"
+      ],
       "total_walk_miles": 2.0,
       "map_waypoints": [
         "Glendale Isle of Skye IV55 8WS",
+        "Isle of Skye Golf Club Sconser IV48",
         "Broadford Isle of Skye IV49",
         "Kyle of Lochalsh IV40 8AA",
         "Plodda Falls Tomich Cannich IV4 7LX",
         "Foyers Loch Ness IV2 6XU"
       ],
       "stops": [
+        {
+          "name": "Isle of Skye Golf Club, Sconser",
+          "type": "golf",
+          "detail": "Aim 10:40 — 40 min drive from Glendale after checkout. 9 holes with Cuillins AND Red Hills views. Club hire available. Tee off ~10:40, done by ~12:30 — well inside the 2pm cutoff. Call 01478 650465.",
+          "url": "https://www.isleofskyegolfclub.co.uk",
+          "maps_query": "Isle of Skye Golf Club Sconser IV48"
+        },
         {
           "name": "Co-op Food — Broadford (stock up before Loch Ness)",
           "type": "supplies",
@@ -1050,12 +1050,23 @@
         }
       ],
       "notes": [
-        "Falls of Foyers is 5 min from Brackla cottage — save for tomorrow morning",
-        "Fuel: If not filled at Broadford, Fort Augustus has a small garage on the A82 (on route). Inverness supermarkets are 30 min off-route but much cheaper if needed.",
-        "Brackla is the quiet south shore — away from the tourist crowds",
+        "🕙 Checkout Glendale 10:00 → Sconser golf 10:40 (done ~12:30) → Broadford fuel + supplies → Kyle → Plodda Falls → Foyers ✓",
+        "Golf: call 01478 650465. Dog policy unconfirmed — if no dogs, Lesley walks along Sconser shoreline.",
+        "Falls of Foyers is 5 min from Brackla cottage — save for tomorrow morning if arriving late.",
+        "Fuel: Broadford Co-op is cheaper than Kyle garage — fill up there.",
         "Plug in BMW overnight at Brackla"
       ],
-      "weather_url": "https://www.bbc.co.uk/weather/2646088"
+      "weather_url": "https://www.bbc.co.uk/weather/2646088",
+      "golf": {
+        "course": "Isle of Skye Golf Club, Sconser",
+        "holes": 9,
+        "cost_gbp": 25,
+        "hire_included": true,
+        "booking": "Call 01478 650465",
+        "url": "https://www.isleofskyegolfclub.co.uk",
+        "dogs_welcome": false,
+        "dogs_note": "Dog policy unconfirmed — call 01478 650465 or email iofsgc@gmail.com before trip"
+      }
     },
     {
       "day": 11,
